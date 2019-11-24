@@ -8,7 +8,7 @@ const App: React.FC = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Checking if the Circle CI config works.
+          Checking if the Circle CI config works - does it work now?
         </p>
         <a
           className="App-link"
