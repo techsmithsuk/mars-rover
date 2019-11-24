@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React, { ReactElement } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-const App: React.FC = () => {
+export function App(): ReactElement {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Checking if the Circle CI config works - does it work now?
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/weather">
+          <h1>Weather</h1>
+        </Route>
+
+        <Route path="/missions">
+          <h1>Missions</h1>
+        </Route>
+
+        <Route path="/rovers">
+          <h1>Rovers</h1>
+        </Route>
+
+        <Route path="/">
+          <h1>Landing Page</h1>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
-export default App;
