@@ -1,12 +1,13 @@
 import React, { ReactElement } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {Weather} from "./components/weather-page/Weather";
 
 export function App(): ReactElement {
   return (
     <Router>
       <Switch>
         <Route path="/weather">
-          <h1>Weather</h1>
+          <Weather />
         </Route>
 
         <Route path="/missions">
