@@ -1,0 +1,48 @@
+@import 'constants.scss';
+
+section {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    font-size: 5rem;
+    border-right: 5px solid white;
+    flex-grow: 1;
+    @media screen and (min-width: 550px) {
+        font-size: 7rem;
+    }
+    &:hover {
+        color: $color-primary;
+        border-right: 5px solid $color-primary;
+        transition-duration: 2s;
+        flex-grow: 3;
+    }
+    
+}
+
+.sections {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.missions {
+    background-image: url("https://images.unsplash.com/photo-1513628253939-010e64ac66cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+    background-size: cover;
+}
+
+.weather {
+    background-image: url("https://images.unsplash.com/photo-1534254910684-68bdc1d69cf7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+    background-size: cover;
+}
+
+.photos {
+    background-image: url("https://images.unsplash.com/photo-1505312926838-645f295a20e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+    background-size: cover;
+
+}
+
+.home {
+    width: 100vw;
+    height: 100vh;
+    animation-delay: 3s;
+}

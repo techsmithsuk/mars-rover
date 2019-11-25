@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HomePage } from './Home';
 
 export function App(): ReactElement {
   return (
@@ -18,7 +19,7 @@ export function App(): ReactElement {
         </Route>
 
         <Route path="/">
-          <h1>Landing Page</h1>
+          <HomePage/>
         </Route>
       </Switch>
     </Router>
