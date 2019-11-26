@@ -1,16 +1,20 @@
-.map{
-    width:100%;
-    background-image: url("/images/mars-map.jpg");
-    background-repeat:no-repeat;
-    background-size:100%;
-}
+.MarsMapImg{
+    .map{
+        width:100%;
+        background-image: url("/images/mars-map.jpg");
+        background-repeat:no-repeat;
+        background-size:100%;
+    }
 
-.circle {
-    fill: red;
-}
+    .circle {
+        fill: red;
+        height:20px;
+        width:20px;
+    }
 
-.circle-clicked{
-    width: 120%;
-    height:120%;
-    fill:cyan;
+    .circle-clicked{
+        width: 120%;
+        height:120%;
+        fill:cyan;
+    }
 }
