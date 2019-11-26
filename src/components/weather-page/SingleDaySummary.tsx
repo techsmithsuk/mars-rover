@@ -1,12 +1,14 @@
-import React from "react";
-import {SingleDayData} from './SingleDayData'
+import React from 'react';
+import {SingleDayData} from './SingleDayData';
+import './SingleDaySummary.scss';
 
-import cloud_icon from './resources/weather_page_summary_icon_cloud.svg';
-import sun_icon from './resources/weather_page_summary_icon_sun.svg';
-import thermo_icon from './resources/weather_page_summary_icon_wind.svg';
-import wind_icon from './resources/weather_page_summary_icon_thermometer.svg';
+import ThermometerIcon from './resources/svg_icon_thermometer';
+import CloudIcon from './resources/svg_icon_cloud';
+import SunIcon from './resources/svg_icon_sun';
+import WindIcon from './resources/svg_icon_wind';
 
 // TODO - Add Image Array & random picker function for weather card icon
+// TODO - Add function to convert "2019-11-14T16:08:54Z" into weekday i.e. Monday
 
 export function SingleDaySummary(props : SingleDayData) {
 
@@ -15,15 +17,18 @@ export function SingleDaySummary(props : SingleDayData) {
 
             <div className="DayIconTempCluster">
 
-                <div>
-                    {props.weekdayName}
+                <div className="DayNameContainer">
+                    <h2>{props.weekdayName}</h2>
                 </div>
-                <img src={cloud_icon}></img> 
 
-                <div>{props.minTemp}</div>
-                <div>{props.maxTemp}</div>
-
-
+                <div className="IconContainer">
+                    <WindIcon/> 
+                </div>
+                
+                <div className="TempContainer">
+                    <div>{props.minTemp}</div>
+                    <div>{props.maxTemp}</div>
+                </div>                
 
             </div>
 
@@ -33,23 +38,6 @@ export function SingleDaySummary(props : SingleDayData) {
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                 </p>
             </div>
-
-
-            <div>{props.marsSolDate}</div>
-            <div>{props.earthSolDate}</div>
-            <div>{props.averageTemp}</div>
-            
-            <div>{props.averageWindSpeed}</div>
-            <div>{props.windDirection}</div>
-            <div>{props.averagePressure}</div>
-            
         </div>
     )
 }
-
-
-
-
-// var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-// var d = new Date(dateString);
-// var dayName = days[d.getDay()];
