@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {MarsMapImg} from './Mission-Map'
 
 export function App(): ReactElement {
   return (
@@ -10,7 +11,7 @@ export function App(): ReactElement {
         </Route>
 
         <Route path="/missions">
-          <h1>Missions</h1>
+          <MarsMapImg/>
         </Route>
 
         <Route path="/rovers">
