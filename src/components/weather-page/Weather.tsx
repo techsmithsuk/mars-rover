@@ -1,7 +1,8 @@
 import React from "react";
-import {SingleDaySummary} from "./SingleDaySummary";
+import {SingleDaySummary, SingleDayDetail} from "./SingleDay";
 import {SingleDayData} from "./SingleDayData";
 
+import './weather.scss';
 
 export function Weather() {
 
@@ -21,8 +22,25 @@ export function Weather() {
         <div>
             <h1 className="weather-page-title">Latest Weather at Elysium Planitia</h1>
      
-            <SingleDaySummary {...tempData}/>
+            <div className="weather-page-seven-day-carousel">
+                <SingleDaySummary {...tempData}/>
+                <SingleDaySummary {...tempData}/>
+                <SingleDaySummary {...tempData}/>
+                <SingleDaySummary {...tempData}/>
+                <SingleDaySummary {...tempData}/>
+                <SingleDaySummary {...tempData}/>
+                <SingleDaySummary {...tempData}/>   
+
+                <div>
+                <SingleDayDetail {...tempData}/>
+                
+
+                </div>             
+            </div>
+
+            
 
         </div>
     );
 }
+
