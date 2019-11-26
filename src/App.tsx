@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import {MarsMapImg} from './Mission-Map'
+import {MissionPage} from './Mission-Page'
 
 export function App(): ReactElement {
   return (
@@ -11,7 +11,7 @@ export function App(): ReactElement {
         </Route>
 
         <Route path="/missions">
-          <MarsMapImg/>
+          <MissionPage/>
         </Route>
 
         <Route path="/rovers">
