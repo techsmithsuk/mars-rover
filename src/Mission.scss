@@ -5,8 +5,12 @@
     background-size:100%;
 }
 
-// .circle {
-//     position: absolute;
-//     margin-top: 50%;
-//     margin-left: 50%;
-// }
+.circle {
+    fill: red;
+}
+
+.circle-clicked{
+    width: 120%;
+    height:120%;
+    fill:cyan;
+}
