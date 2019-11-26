@@ -1,0 +1,28 @@
+.chooseRover{ 
+
+    text-align: center;
+
+    .roverImage {
+        border-radius: 50%;
+        width: 80px;
+        height:80px;
+    }
+
+    .roverOptions {
+        width: 30%;
+        opacity: 0.5;
+    }
+
+    .selected {
+        opacity: 1;
+    }
+
+    .allRovers {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    h3 { 
+        font-size: 15px;
+    }
+}
