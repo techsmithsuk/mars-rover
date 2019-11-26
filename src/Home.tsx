@@ -5,7 +5,7 @@ export function HomePage() {
 const[homeHeight, setHomeHeight] = useState( {height:"100vh"})
 
 function setHomeHeighttoZero(){
-    setHomeHeight({height:"0"});
+    setHomeHeight({height:"100px"});
 }
 
     return (
