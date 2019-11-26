@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Scroll-Bar.scss'
 import {landingList} from './Mission-Page'
 

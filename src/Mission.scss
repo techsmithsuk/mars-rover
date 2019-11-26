@@ -1,3 +1,5 @@
+@import 'style/constants';
+
 .MarsMapImg{
     .map{
         width:100%;
@@ -7,14 +9,10 @@
     }
 
     .circle {
-        fill: red;
-        height:20px;
-        width:20px;
+        fill:red;
     }
 
     .circle-clicked{
-        width: 120%;
-        height:120%;
-        fill:cyan;
+        fill:$color-primary;
     }
 }

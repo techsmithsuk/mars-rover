@@ -1,3 +1,5 @@
+@import 'style/constants';
+
 .MissionScroll{
 
     height:200px;
@@ -16,7 +18,7 @@
       }
 
     .card--content {
-        background-color: #e74c3c;
+        background-color: red;
         min-width: auto;
         margin: 5px;
         height:40px;
@@ -27,7 +29,6 @@
 
     }
     .card--content-selected{
-        background-color:cyan;
-        color:black
+        background-color:$color-primary;
     }
 }
