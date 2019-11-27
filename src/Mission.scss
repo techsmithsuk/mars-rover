@@ -10,9 +10,13 @@
 
     .circle {
         fill:red;
+        &:hover{
+            cursor: pointer;
+        }
     }
 
     .circle-clicked{
+        transition: all 0.5s;
         fill:$color-primary;
     }
 }

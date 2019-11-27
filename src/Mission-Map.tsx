@@ -29,6 +29,5 @@ export function MarsMapImg(props: MarsMapProps) {
                 {landingList.map(landingSight => <circle onClick={() => props.setSelectedId(landingSight.name)} cx={landingSight.x} cy={landingSight.y} r = {getRadius(landingSight.name)} className={getClassName(landingSight.name)}/>)}
             </svg>
         </div>
-    
     )
 }
