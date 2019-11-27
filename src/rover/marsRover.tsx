@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { ChooseRover } from './chooseRover'
 import { ChooseCamera } from './chooseCamera'
 import './marsRover.scss'
 
 export function MarsRover() {
-    return <div className="roverBox">
-        <ChooseRover />
-        <ChooseCamera />
-        </div>;
+    const [rover, setRover] = useState('');
+
+    return (
+            <div className="roverBox">
+            <ChooseRover rover={rover} setRover={setRover} />
+            <ChooseCamera />
+            </div>
+    );
 }
 

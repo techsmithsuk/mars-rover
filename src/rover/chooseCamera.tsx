@@ -39,7 +39,7 @@ function CameraCard(props: CameraCardProps) {
 
     return (
         <div className={getClassName()} onClick={() => props.onCameraSelected(props.cameraName)}>
-            <img className="cameraImage" src={props.cameraImage}></img>
+            <img className="cameraImage" src={props.cameraImage} alt="camera"></img>
             <h3>{props.cameraName}</h3>
         </div>
     );
