@@ -7,10 +7,6 @@ import CloudIcon from './resources/svg_icon_cloud';
 import SunIcon from './resources/svg_icon_sun';
 import WindIcon from './resources/svg_icon_wind';
 
-// TODO - Add Image Array & random picker function for weather card icon
-// TODO - Add function to convert "2019-11-14T16:08:54Z" into weekday i.e. Monday
-// TODO - Generate weather text summary other than lorem ipsum
-
 export function SingleDaySummary(props : SingleDayData) {
     
     let avTemp = props.averageTemp ? Math.round(props.averageTemp) : 0;   
@@ -36,41 +32,40 @@ export function SingleDaySummary(props : SingleDayData) {
     )
 }
 
-export function SingleDayDetail(props : SingleDayData) {
-    
-    // TODO on summary class click/hover change this one
+export function SingleDayDetail(props : SingleDayData) {  
     
     let min = props.minTemp ? Math.round(props.minTemp) : 0;   
     let max = props.maxTemp ? Math.round(props.maxTemp) : 0; 
 
-    // TODO - Convert date from: "2019-11-14T16:08:54Z" to "DD-MM-YYYY"
     let date = props.earthSolDate;   
 
     return (
         <div className="SingleDayDetail">            
 
-            <div className="weekday">
-                
-                <p>MARS SOL {props.marsSolDate}</p>
+            <div className="weekdayBlock">
+                <p>DATE</p>
                 <p>{props.weekdayName} {props.earthSolDate}</p>
+                <p>MARS SOL {props.marsSolDate}</p>
+                
 
             </div> 
 
-            <div>
-                <p>Low: {min}</p>
+            <div className="tempBlock">
+                <ThermometerIcon/>  
                 <p>High: {max}</p>
+                <p>Low: {min}</p>
+                
             </div>
 
-            <div>
-                <p>Wind Speed:  {props.averageWindSpeed}</p>
-                <p>Wind Direction:  {props.windDirection}</p>
-                <WindIcon/> 
-                {/* TODO replace with compass/arrow icon */}
-                {/* TODO update compass/arrow direction with code */}
+            <div className="windBlock">
+                <WindIcon/>  
+                <p>{props.averageWindSpeed} mph</p>
+                <p>{props.windDirection}</p>
+                           
             </div>
 
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <p className="textBlock">
+                "Sunny with a chance of meatballs."
             </p>         
                       
         </div>

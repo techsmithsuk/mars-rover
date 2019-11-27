@@ -1,22 +1,26 @@
+$separation: 8px;
+$summary-width: 60px;
+$border-width: 1px;
+
+
 
 .weather-page-title {
-    margin: 60px;
     color: white;  
 }
 
 .weather-page-seven-day-carousel {
-
-    margin: 60px;
-
-    display: flex;
-    flex-direction: row;
+    
+    width: 480px;  
 
     border-top: 1px solid rgba(230, 230, 230, 0.1);
     border-bottom: 1px solid rgba(230, 230, 230, 0.1);    
 
-    background-color: rgba(230, 230, 230, 0.05); 
+    background-color: rgba(230, 230, 230, 0.05);   
+}
 
+.carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     
-    
-
 }
