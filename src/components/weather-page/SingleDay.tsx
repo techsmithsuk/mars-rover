@@ -7,10 +7,6 @@ import CloudIcon from './resources/svg_icon_cloud';
 import SunIcon from './resources/svg_icon_sun';
 import WindIcon from './resources/svg_icon_wind';
 
-// TODO - Add Image Array & random picker function for weather card icon
-// TODO - Add function to convert "2019-11-14T16:08:54Z" into weekday i.e. Monday
-// TODO - Generate weather text summary other than lorem ipsum
-
 export function SingleDaySummary(props : SingleDayData) {
     
     let avTemp = props.averageTemp ? Math.round(props.averageTemp) : 0;   
@@ -41,9 +37,7 @@ export function SingleDayDetail(props : SingleDayData) {
     // TODO on summary class click/hover change this one
     
     let min = props.minTemp ? Math.round(props.minTemp) : 0;   
-    let max = props.maxTemp ? Math.round(props.maxTemp) : 0; 
-
-    // TODO - Convert date from: "2019-11-14T16:08:54Z" to "DD-MM-YYYY"
+    let max = props.maxTemp ? Math.round(props.maxTemp) : 0;     
     let date = props.earthSolDate;   
 
     return (
@@ -65,8 +59,6 @@ export function SingleDayDetail(props : SingleDayData) {
                 <p>Wind Speed:  {props.averageWindSpeed}</p>
                 <p>Wind Direction:  {props.windDirection}</p>
                 <WindIcon/> 
-                {/* TODO replace with compass/arrow icon */}
-                {/* TODO update compass/arrow direction with code */}
             </div>
 
             <p>
