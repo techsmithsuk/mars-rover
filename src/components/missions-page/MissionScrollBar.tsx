@@ -5,19 +5,24 @@ import {landingList} from './MissionPage'
 
 interface MissionScrollProps {
     selectedCard: string;
-    selectMissionCard: (id:string ) => void;
+    selectMissionCard: (id: string) => void;
 }
 
-export function MissionScrollBar(props: MissionScrollProps){
+// interface MissionScrollBar {
+//     selectedCard: string;
+//     selectMissionCard: (id:string ) => void;
+// }
+
+export function MissionScrollBar(props: MissionScrollProps) {
 
     function handleClick(id: string) {
         props.selectMissionCard(id);
     }
 
-    function getClassName(id: string){
-        if (props.selectedCard === id){
+    function getClassName(id: string) {
+        if (props.selectedCard === id) {
             return "card--content card--content-selected";
-        } 
+        }
         return "card--content";
     }
 
@@ -25,9 +30,23 @@ export function MissionScrollBar(props: MissionScrollProps){
 
         <div className="MissionScrollBar">
             <div className="card">
-                {landingList.map(landingSight => <p  className={getClassName(landingSight.name)} onClick={() => handleClick(landingSight.name)}>{landingSight.name}</p>)}
+                {landingList.map(landingSight =>
+                    <div className="image-card" onClick={() => handleClick(landingSight.name)}>
+                        <img src={landingSight.imageSrc}/>
+                        <p className={getClassName(landingSight.name)}>
+                            {landingSight.name}
+                        </p>
+                    </div>)}
             </div>
         </div>
-    
     )
+}
+
+function ScrollbarItem(props: any) {
+    return (
+        <div className={props.className}>
+            <img src={props.image}/>
+            <p>{props.name}</p>
+        </div>
+    );
 }
