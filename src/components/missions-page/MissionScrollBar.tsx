@@ -1,6 +1,6 @@
 import React from 'react';
-import './Scroll-Bar.scss'
-import {landingList} from './Mission-Page'
+import './MissionScrollBar.scss'
+import {landingList} from './MissionPage'
 
 
 interface MissionScrollProps {
@@ -8,7 +8,7 @@ interface MissionScrollProps {
     selectMissionCard: (id:string ) => void;
 }
 
-export function MissionScroll(props: MissionScrollProps){
+export function MissionScrollBar(props: MissionScrollProps){
 
     function handleClick(id: string) {
         props.selectMissionCard(id);
@@ -23,7 +23,7 @@ export function MissionScroll(props: MissionScrollProps){
 
     return (
 
-        <div className="MissionScroll">
+        <div className="MissionScrollBar">
             <div className="card">
                 {landingList.map(landingSight => <p  className={getClassName(landingSight.name)} onClick={() => handleClick(landingSight.name)}>{landingSight.name}</p>)}
             </div>

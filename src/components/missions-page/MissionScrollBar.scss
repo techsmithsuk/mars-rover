@@ -1,6 +1,6 @@
-@import 'style/constants';
+@import '../../style/constants';
 
-.MissionScroll{
+.MissionScrollBar{
 
     height:200px;
 
@@ -22,7 +22,9 @@
         line-height: 40px;
         padding: 0 10px;
         border-radius: 5px;
-
+        &:hover{
+            cursor: pointer;
+        }
     }
     .card--content-selected{
         background-color:$color-primary;

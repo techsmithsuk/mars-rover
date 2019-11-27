@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import {MarsMapImg} from './Mission-Map'
-import {MissionScroll} from './Scroll-Bar'
+import {MissionMap} from './MissionMap'
+import {MissionScrollBar} from './MissionScrollBar'
 
 interface LandingList {
     name: string,
@@ -181,8 +181,8 @@ export function MissionPage() {
 
     return (
         <div>
-            <MarsMapImg setSelectedId={setSelectedId} selectedId={selectedId}/>
-            <MissionScroll selectMissionCard={setSelectedId} selectedCard={selectedId}/>
+            <MissionMap setSelectedId={setSelectedId} selectedId={selectedId}/>
+            <MissionScrollBar selectMissionCard={setSelectedId} selectedCard={selectedId}/>
 
         </div>
     )
