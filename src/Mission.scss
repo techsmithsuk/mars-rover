@@ -1,0 +1,18 @@
+@import 'style/constants';
+
+.MarsMapImg{
+    .map{
+        width:100%;
+        background-image: url("/images/mars-map.jpg");
+        background-repeat:no-repeat;
+        background-size:100%;
+    }
+
+    .circle {
+        fill:red;
+    }
+
+    .circle-clicked{
+        fill:$color-primary;
+    }
+}
