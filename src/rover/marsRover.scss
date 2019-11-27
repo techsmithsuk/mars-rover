@@ -1,8 +1,10 @@
 @import '../style/constants.scss';
 
-@media screen and (min-width: $desktop-breakpoint) {
-    .roverBox {
-        display: flex;
-
+.roverBox {
+    margin: auto;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     }
-}

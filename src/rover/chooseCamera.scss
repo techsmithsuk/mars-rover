@@ -1,6 +1,6 @@
 @import '../style/constants.scss';
 
-.chooseRover{ 
+.chooseCamera{ 
 
     min-width: 300px;
     max-width: 800px;
@@ -8,20 +8,7 @@
 
     text-align: center;
 
-    @media screen and (min-width: $phone-breakpoint) {
-        min-width: 500px;
-    }
-
-    @media screen and (min-width: $tablet-breakpoint) {
-        min-width: 600px;
-    }
-
-    // @media screen and (min-width: $large-desktop-breakpoint) {
-    //     min-width: 500px;
-    // }
-
-
-    .roverImage {
+    .cameraImage {
         border-radius: 50%;
         width: 80px;
         height:80px;
@@ -43,7 +30,7 @@
 
     }
 
-    .roverOptions {
+    .cameraOptions {
         min-width: 30%;
         opacity: 0.5;
 
@@ -53,7 +40,7 @@
         opacity: 1;
     }
 
-    .allRovers {
+    .allCameras {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -62,8 +49,7 @@
             justify-content: center;
         }
 
-        @media screen and (min-width: $large-desktop-breakpoint) {
-            flex-direction: column;
+        @media screen and (min-width: $desktop-breakpoint) {
             align-items: center;
         }
     }
