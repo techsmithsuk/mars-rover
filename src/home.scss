@@ -5,7 +5,7 @@ $borderWidth: 5px;
 
 @mixin homePageFont {
     font-size: 2rem;
-    @media screen and (min-width: 550px) {
+    @media screen and (min-width: $phone-breakpoint) {
         font-size: 4rem;
         
     }
