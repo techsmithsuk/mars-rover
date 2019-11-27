@@ -1,12 +1,13 @@
 import React from "react";
-import {SingleDaySummary, SingleDayDetail} from "./SingleDay";
+import SingleDayDetail from "./SingleDayDetail";
+import SingleDaySummary from "./SingleDaySummary";
 import {SingleDayData} from "./SingleDayData";
 
-import './weather.scss';
+import './Weather.scss';
 
 export function Weather() {
 
-    const tempData: SingleDayData = {  
+    const mondayData: SingleDayData = {  
         marsSolDate: '344',
         earthSolDate: '14th',
         averageTemp: -67.108,
@@ -15,21 +16,31 @@ export function Weather() {
         averageWindSpeed: 5.3,
         windDirection: 'SSE',
         averagePressure: 681.448,
-        weekdayName: 'Monday' // TODO calc via function
+        weekdayName: 'Mon' // TODO calc via function
+    }
+
+    const tempData: SingleDayData = {  
+        marsSolDate: '345',
+        earthSolDate: '15th',
+        averageTemp: -47.108,
+        minTemp: -199.926,
+        maxTemp: -8.287,
+        averageWindSpeed: 5.3,
+        windDirection: 'SSE',
+        averagePressure: 681.448,
+        weekdayName: 'Tue' // TODO calc via function
     }
 
     return (
-        <div>
-            <h1 className="weather-page-title">Latest Weather at Elysium Planitia</h1>
+        <div className="weather-page">
+            <h1 className="title">Latest Weather at Elysium Planitia</h1>
      
-            <div className="weather-page-seven-day-carousel">
+            <div className="seven-day-display">
 
-                <div className="summary">
-                    <SingleDayDetail {...tempData}/>  
-                </div>    
-               
+                <SingleDayDetail {...mondayData}/>  
+                
                 <div className="carousel">
-                    <SingleDaySummary {...tempData}/>
+                    <SingleDaySummary {...mondayData}/>
                     <SingleDaySummary {...tempData}/>
                     <SingleDaySummary {...tempData}/>
                     <SingleDaySummary {...tempData}/>
