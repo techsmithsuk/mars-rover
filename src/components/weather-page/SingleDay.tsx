@@ -60,8 +60,7 @@ export function SingleDayDetail(props : SingleDayData) {
             <div className="windBlock">
                 <WindIcon/>  
                 <p>{props.averageWindSpeed} mph</p>
-                <p>{props.windDirection}</p>
-                           
+                <p>{props.windDirection}</p>    
             </div>
 
             <p className="textBlock">
