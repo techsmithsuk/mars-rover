@@ -25,7 +25,7 @@ export function SingleDaySummary(props : SingleDayData) {
             </div>
 
             <div className="icon">
-                <CloudIcon/> 
+                <SunIcon/> 
             </div>
             
             <div className="AverageTemp">
