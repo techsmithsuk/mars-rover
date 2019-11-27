@@ -8,11 +8,11 @@ export function Weather() {
 
     const tempData: SingleDayData = {  
         marsSolDate: '344',
-        earthSolDate: '2019-11-14T16:08:54Z',
+        earthSolDate: '14th',
         averageTemp: -67.108,
         minTemp: -99.926,
         maxTemp: -23.287,
-        averageWindSpeed: 5.344,
+        averageWindSpeed: 5.3,
         windDirection: 'SSE',
         averagePressure: 681.448,
         weekdayName: 'Monday' // TODO calc via function
@@ -23,19 +23,21 @@ export function Weather() {
             <h1 className="weather-page-title">Latest Weather at Elysium Planitia</h1>
      
             <div className="weather-page-seven-day-carousel">
-                <SingleDaySummary {...tempData}/>
-                <SingleDaySummary {...tempData}/>
-                <SingleDaySummary {...tempData}/>
-                <SingleDaySummary {...tempData}/>
-                <SingleDaySummary {...tempData}/>
-                <SingleDaySummary {...tempData}/>
-                <SingleDaySummary {...tempData}/>   
 
-                <div>
-                <SingleDayDetail {...tempData}/>
-                
-
-                </div>             
+                <div className="summary">
+                    <SingleDayDetail {...tempData}/>  
+                </div>    
+               
+                <div className="carousel">
+                    <SingleDaySummary {...tempData}/>
+                    <SingleDaySummary {...tempData}/>
+                    <SingleDaySummary {...tempData}/>
+                    <SingleDaySummary {...tempData}/>
+                    <SingleDaySummary {...tempData}/>
+                    <SingleDaySummary {...tempData}/>
+                    <SingleDaySummary {...tempData}/>   
+                </div>
+                      
             </div>
 
             
