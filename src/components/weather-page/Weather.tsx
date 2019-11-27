@@ -16,7 +16,7 @@ export function Weather() {
         averageWindSpeed: 5.3,
         windDirection: 'SSE',
         averagePressure: 681.448,
-        weekdayName: 'Mon' // TODO calc via function
+        weekdayName: 'Mon'
     }
 
     const tempData: SingleDayData = {  
@@ -28,7 +28,7 @@ export function Weather() {
         averageWindSpeed: 5.3,
         windDirection: 'SSE',
         averagePressure: 681.448,
-        weekdayName: 'Tue' // TODO calc via function
+        weekdayName: 'Tue' 
     }
 
     return (
@@ -50,9 +50,6 @@ export function Weather() {
                 </div>
                       
             </div>
-
-            
-
         </div>
     );
 }
