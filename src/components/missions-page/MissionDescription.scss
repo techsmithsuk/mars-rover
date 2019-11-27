@@ -1,0 +1,32 @@
+@import '../../style/constants.scss';
+
+.MissionDescription {
+  margin-top: 5px;
+  color: $color-foreground;
+  .mission-image{
+    width: 100%;
+  }
+
+  .launch {
+   color: $color-secondary;
+    font-weight: bold;
+  }
+
+  .info {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .moreInfo {
+    background-color: $button-primary;
+    text-align: center;
+    padding: 5px;
+    color: $color-foreground;
+    font-weight: bold;
+    flex: 1;
+    border-radius: 5px;
+  }
+
+
+}

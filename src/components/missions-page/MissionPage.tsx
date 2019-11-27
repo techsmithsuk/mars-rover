@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import {MissionMap} from './MissionMap'
 import {MissionScrollBar} from './MissionScrollBar'
+import {MissionDescription} from './MissionDescription';
 
-interface LandingList {
+
+export interface Mission {
     name: string,
     x: string,
     y: string,
@@ -14,7 +16,7 @@ interface LandingList {
 }
 
 
-export const landingList: LandingList[] = [{
+export const landingList: Mission[] = [{
     name: "Phoenix",
     x: "150",
     y: "70",
@@ -168,13 +170,16 @@ export const landingList: LandingList[] = [{
         name: "MarsPolarLander",
         x: "1080",
         y: "530",
-        imageSrc: "/images/missions-mars-polar-lander.png",
+        imageSrc: "/images/mission-mars-polar-lander.png",
         launched: "Jan 3, 1999",
         landed: "Dec 3, 1999",
         moreInfoUrl: "https://mars.nasa.gov/mars-exploration/missions/polar-lander/",
         description: "The Mars Polar Lander, also known as the Mars Surveyor '98 Lander, was a 290-kilogram robotic spacecraft lander launched by NASA on January 3, 1999 to study the soil and climate of Planum Australe, a region near the south pole on Mars. It formed part of the Mars Surveyor '98 mission. On December 3, 1999, however, after the descent phase was expected to be complete, the lander failed to reestablish communication with Earth. A post-mortem analysis determined the most likely cause of the mishap was premature termination of the engine firing prior to the lander touching the surface, causing it to strike the planet at a high velocity."
     }];
 
+function getMission(name: string): Mission | undefined {
+    return landingList.find(mission => mission.name === name);
+}
 
 export function MissionPage() {
     const [selectedId, setSelectedId] = useState("");
@@ -183,7 +188,7 @@ export function MissionPage() {
         <div>
             <MissionMap setSelectedId={setSelectedId} selectedId={selectedId}/>
             <MissionScrollBar selectMissionCard={setSelectedId} selectedCard={selectedId}/>
-
+            <MissionDescription mission={getMission(selectedId)}/>
         </div>
     )
 }

@@ -9,7 +9,7 @@
     }
 
     .circle {
-        fill:red;
+        fill:$button-primary;
         &:hover{
             cursor: pointer;
         }
