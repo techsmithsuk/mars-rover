@@ -41,12 +41,3 @@ export function MissionScrollBar(props: MissionScrollProps) {
         </div>
     )
 }
-
-function ScrollbarItem(props: any) {
-    return (
-        <div className={props.className}>
-            <img src={props.image}/>
-            <p>{props.name}</p>
-        </div>
-    );
-}
