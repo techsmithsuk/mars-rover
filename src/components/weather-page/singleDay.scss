@@ -2,6 +2,12 @@ body {
     background-color: black;
 }
 
+svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
 .SingleDaySummary {
 
     margin: 2px;
@@ -44,13 +50,7 @@ body {
     .icon {           
         height: 40px;
         width: 100%;
-        margin-left: 15px;    
-
-        svg {
-            width: 30px;
-            height: 30px;
-            fill: white;
-        }   
+        margin-left: 15px;           
     }
 
     .AverageTemp {
