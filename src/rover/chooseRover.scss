@@ -49,22 +49,5 @@
             align-items: center;
         }
     }
-
-    h2 {
-        font-size: 25px;
-
-        @media screen and (min-width: $tablet-breakpoint) {
-            font-size: 35px;
-        }
-    }
-
-
-    h3 { 
-        font-size: 15px;
-
-        @media screen and (min-width: $tablet-breakpoint) {
-            font-size: 20px;
-        }
-    }
    
 }
