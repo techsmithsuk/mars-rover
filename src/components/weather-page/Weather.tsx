@@ -19,7 +19,6 @@ export function Weather() {
     } 
 
     const selected = weatherData[selectedIndex];
-    console.log(weatherData)
     return (
         <div className="weather-page">
             <h1 className="title">Latest Weather at Elysium Planitia</h1>
