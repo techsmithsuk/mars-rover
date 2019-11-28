@@ -1,6 +1,9 @@
 import React, { ReactElement } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import {Weather} from "./components/weather-page/Weather";
+import {MissionPage} from './Mission-Page'
+
 import { HomePage } from './Home';
 import { MarsRover } from './rover/marsRover';
 import { MissionPage } from './components/missions-page/MissionPage';
@@ -10,7 +13,7 @@ export function App(): ReactElement {
     <Router>
       <Switch>
         <Route path="/weather">
-          <h1>Weather</h1>
+          <Weather />
         </Route>
 
         <Route path="/missions">

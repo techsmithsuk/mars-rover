@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Single Day Detail Component Should render without errors 1`] = `
+<div
+  className="SingleDayDetail"
+>
+  <div
+    className="weekdayBlock"
+  >
+    <p>
+      DATE
+    </p>
+    <p>
+      Monday
+       
+      14th
+    </p>
+    <p>
+      MARS SOL 
+      344
+    </p>
+  </div>
+  <div
+    className="tempBlock"
+  >
+    <p>
+      High
+    </p>
+    <p>
+      -23 °C
+    </p>
+    <p>
+      Low
+    </p>
+    <p>
+      -100 °C
+    </p>
+  </div>
+  <div
+    className="windBlock"
+  >
+    <WindIcon />
+    <p>
+      5.3
+       mph
+    </p>
+    <p>
+      SSE
+    </p>
+  </div>
+  <p
+    className="textBlock"
+  >
+    "Sunny with a chance of meatballs."
+  </p>
+</div>
+`;
+
+exports[`Single Day Summary Component Should render without errors 1`] = `
+<div
+  className="SingleDaySummary"
+>
+  <div
+    className="selection-highlight"
+  />
+  <div
+    className="weekday"
+  >
+    Monday
+  </div>
+  <div
+    className="icon"
+  >
+    <SunIcon />
+  </div>
+  <div
+    className="averageTemp"
+  >
+    -67 °C°C
+  </div>
+</div>
+`;

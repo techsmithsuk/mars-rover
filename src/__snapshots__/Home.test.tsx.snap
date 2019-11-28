@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component Should render without errors 1`] = `
+<div
+  className="homePage"
+>
+  <section
+    className="home"
+  >
+     Welcome to the Mars Rover!
+  </section>
+  <div
+    className="sections"
+  >
+    <a
+      className="link missions"
+      href="/missions"
+      onClick={[Function]}
+    >
+      <section>
+        Missions
+      </section>
+    </a>
+    <a
+      className="link weather"
+      href="/weather"
+      onClick={[Function]}
+    >
+      <section>
+        Weather
+      </section>
+    </a>
+    <a
+      className="link photos"
+      href="/rovers"
+      onClick={[Function]}
+    >
+       
+      <section>
+        Photos
+      </section>
+    </a>
+  </div>
+</div>
+`;

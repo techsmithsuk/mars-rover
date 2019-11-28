@@ -1,0 +1,19 @@
+@import '../../style/constants.scss';
+@import './Weather-constants.scss';
+
+
+.weather-page{
+
+    .title {
+        color: $color-foreground;  
+    }
+
+    .seven-day-display {
+        width: $seven-day-width;    
+    }
+
+    .carousel {
+        @include flex-row;
+        justify-content: space-between;
+    }
+}

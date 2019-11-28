@@ -12,6 +12,23 @@ h1 {
   font-family: 'Open Sans', sans-serif;
 }
 
+
 a {
   text-decoration: none;
+}
+
+h2 {
+  font-size: 25px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+      font-size: 35px;
+  }
+}
+
+h3 { 
+  font-size: 15px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+      font-size: 20px;
+  }
 }
