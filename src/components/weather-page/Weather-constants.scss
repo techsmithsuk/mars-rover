@@ -1,0 +1,52 @@
+@import '../../style/constants.scss';
+
+$seven-day-width:480px;
+$summary-width: 60px;
+$detail-height: 60px;
+$font-size: 16px;
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin box-gradient{
+    background: linear-gradient(90deg, rgba(230,230,230,0.1) 0%, rgba(255,255,255,0.15) 100%, rgba(220,220,220,0.1) 100%);
+}
+@mixin box-gradient-hover{
+    background: linear-gradient(90deg, rgba(230,230,230,0.2) 0%, rgba(255,255,255,0.3) 100%, rgba(220,220,220,0.2) 100%);
+}
+
+@mixin box-styling{ 
+    @include box-gradient;
+    color: rgba($color-foreground,0.7);   
+}
+
+@mixin svg-icon {
+    svg{
+        width: $summary-width / 2;
+        height: $summary-width / 2;
+        fill: $color-foreground;
+    }
+}
+
+@mixin font-styles {
+
+    text-transform: uppercase; 
+    font-weight: bold;   
+    font-size: $font-size; 
+}
+
+@mixin summary-styles {
+    height: $detail-height;
+    padding-top: $detail-height / 4;    
+    padding-bottom: $detail-height / 4;  
+}
+@mixin detail-styles {
+    min-width: 100px;          
+    padding: 6px;
+}

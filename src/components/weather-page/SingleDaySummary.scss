@@ -1,0 +1,36 @@
+@import '../../style/constants.scss';
+@import './Weather-constants.scss';
+
+.SingleDaySummary {
+    @include box-styling;
+    @include flex-column;   
+    @include font-styles;     
+   
+    margin-top: 8px;
+
+    width: $summary-width;
+    height: $detail-height * 3;    
+   
+    text-align: center;
+    color: $color-foreground;
+
+    .weekday, .averageTemp {   
+        @include summary-styles;                
+    }
+
+    .icon {
+        @include summary-styles; 
+        @include svg-icon;
+    }
+
+    .selection-highlight { 
+        min-height: 8px;   
+    }
+
+    &:hover {
+        @include box-gradient-hover;          
+        .selection-highlight {        
+            background-color: $color-red;
+        }
+    }    
+}
