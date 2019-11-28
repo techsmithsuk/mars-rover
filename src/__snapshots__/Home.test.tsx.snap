@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component Should render without errors 1`] = `
+<div
+  className="homePage"
+>
+  <section
+    className="home"
+  >
+     Welcome to the Mars Rover!
+  </section>
+  <div
+    className="sections"
+  >
+    <section
+      className="missions"
+    >
+      Missions
+    </section>
+    <section
+      className="weather"
+    >
+      Weather
+    </section>
+    <section
+      className="photos"
+    >
+      Photos
+    </section>
+  </div>
+</div>
+`;
