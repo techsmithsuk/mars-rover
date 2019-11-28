@@ -1,14 +1,36 @@
 @import '../../style/constants.scss';
 
+@mixin navbar-height($height) {
+    height: $height;
+    line-height: $height;
+}
+
 .navbar {
+    font-size: 12px;
     display: flex;
     list-style: none;
     padding-inline-start: 0px;
-    justify-content: space-evenly;
+    justify-content: center;
+    background-color: $color-primary;
+    margin-block-start: 0px;
+    border-bottom: 5px solid white;
+    @include navbar-height(30px);
+    
+    @media screen and (min-width: $phone-breakpoint) {
+        font-size: 20px;
+        @include navbar-height(50px);
+      
+    }
+
+    .nav-element {
+        text-decoration: none;
+        color: $color-foreground;
+        margin: 0 4vw;
+
+        &:hover {
+            color: black;
+        }
+
+    }
 }
 
-.nav-element {
-    text-decoration: none;
-    color: $color-foreground;
-    margin: 10px;
-}
