@@ -8,6 +8,7 @@ import SunIcon from './resources/svg_icon_sun';
 
 interface SingleDataDetailProps{
     data: SingleDayData;
+    className: string;
 }
 
 export default function SingleDaySummary(props : SingleDataDetailProps) {
@@ -15,7 +16,7 @@ export default function SingleDaySummary(props : SingleDataDetailProps) {
     const avTemp = formatTemperature(props.data.averageTemp);
 
     return (
-        <div className="SingleDaySummary">            
+        <div className= {props.className}>            
 
             <div className="selection-highlight"></div>
 

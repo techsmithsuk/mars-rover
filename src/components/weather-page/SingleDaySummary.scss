@@ -32,5 +32,11 @@
         .selection-highlight {        
             background-color: $color-red;
         }
-    }    
+    }      
+}
+.SingleDaySummarySelected {
+    @include box-gradient-hover;          
+    .selection-highlight {        
+        background-color: $color-foreground;
+    }   
 }

@@ -19,19 +19,29 @@ export function Weather() {
     } 
 
     const selected = weatherData[selectedIndex];
-    return (
-        <div className="weather-page">
-            <h1 className="title">Latest Weather at Elysium Planitia</h1>
-     
-            <div className="seven-day-display">
 
-                <SingleDayDetail data = {selected}/>  
-                
-                <div className="carousel">
-                    {weatherData.map(weatherDay  => <div onClick ={() => setSelectedIndex(weatherDay.id)}><SingleDaySummary data = {weatherDay}/></div>)}
-                </div>  
+    function handleClassName(id: number):string{
+            return id === selectedIndex ? "SingleDaySummary SingleDaySummarySelected" : "SingleDaySummary";  
+    };
+
+    return (
+        <div>
+            <div className="weather-page">
+                <h1 className="title">Latest Weather at Elysium Planitia</h1>
+        
+                <div className="seven-day-display">
+
+                    <SingleDayDetail data = {selected}/>  
+                    
+                    <div className="carousel">
+                        {weatherData.map(weatherDay  => <div onClick ={() => setSelectedIndex(weatherDay.id)}><SingleDaySummary data = {weatherDay} className={handleClassName(weatherDay.id)}/></div>)}
+                    </div>  
+                </div>
+
             </div>
-        </div>
+            <img src="https://mars.nasa.gov/rss/api/images/insight_marsweather_white.png" alt="Weather Conditions Graph"className="weatherGraph"/>
+        </div>        
+
     );
     
 }
