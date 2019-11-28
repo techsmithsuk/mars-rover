@@ -7,7 +7,7 @@ export function ChooseRover(props: ChooseRoverProps) {
         <div className="chooseRover">
             <h2>Choose your Rover</h2>
             <div className = "allRovers">
-                {rovers.map(roverObject => <RoverCard roverName={roverObject.name} roverImage='/images/curioisity_rover.jpg' onRoverSelected={props.setRover} selectedRover={props.rover}/>)}   
+                {rovers.map(roverObject => <RoverCard key={roverObject.name} roverName={roverObject.name} roverImage='/images/curioisity_rover.jpg' onRoverSelected={props.setRover} selectedRover={props.rover}/>)}   
             </div>
         </div>
     )
