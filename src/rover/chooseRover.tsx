@@ -1,18 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './chooseRover.scss';
+import { rovers } from './marsRover';
 
 export function ChooseRover(props: ChooseRoverProps) {
     return (
         <div className="chooseRover">
             <h2>Choose your Rover</h2>
-            <div className="allRovers">
-                <RoverCard roverName="Curiosity" roverImage='/images/curioisity_rover.jpg' onRoverSelected={props.setRover} selectedRover={props.rover}/>
-                <RoverCard roverName="Opportunity" roverImage='/images/opportunity_rover.jpg' onRoverSelected={props.setRover} selectedRover={props.rover}/>
-                <RoverCard roverName="Spirit" roverImage='/images/spirit_rover.jpg' onRoverSelected={props.setRover} selectedRover={props.rover}/>
+            <div className = "allRovers">
+                {rovers.map(roverObject => <RoverCard roverName={roverObject.name} roverImage='/images/curioisity_rover.jpg' onRoverSelected={props.setRover} selectedRover={props.rover}/>)}   
             </div>
         </div>
     )
 }
+
 interface ChooseRoverProps {
     rover: string;
     setRover: (rover: string) => void;   
