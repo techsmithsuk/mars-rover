@@ -1,6 +1,6 @@
-@import 'style/constants';
+@import '../../style/constants';
 
-.MarsMapImg{
+.MissionMap{
     .map{
         width:100%;
         background-image: url("/images/mars-map.jpg");
@@ -9,10 +9,14 @@
     }
 
     .circle {
-        fill:red;
+        fill:$button-primary;
+        &:hover{
+            cursor: pointer;
+        }
     }
 
     .circle-clicked{
+        transition: all 0.5s;
         fill:$color-primary;
     }
 }
