@@ -1,12 +1,9 @@
 import React from 'react';
-import {SingleDayData} from './SingleDayData';
+import {SingleDayData} from '../../helpers/ApiDataCall';
 import './SingleDayDetail.scss';
 
 import formatTemperature from '../../helpers/FormatTemperature';
 
-import ThermometerIcon from './resources/svg_icon_thermometer';
-import CloudIcon from './resources/svg_icon_cloud';
-import SunIcon from './resources/svg_icon_sun';
 import WindIcon from './resources/svg_icon_wind';
 
 interface SingleDataDetailProps{
