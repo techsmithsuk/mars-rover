@@ -4,10 +4,12 @@ import {Weather} from "./components/weather-page/Weather";
 import {MissionPage} from './Mission-Page'
 import { HomePage } from './Home';
 import { MarsRover } from './rover/marsRover';
+import { Navbar } from './components/navbar/Navbar';
 
 export function App(): ReactElement {
   return (
     <Router>
+      <Navbar />
       <Switch>
         <Route path="/weather">
           <Weather />

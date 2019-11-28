@@ -1,13 +1,12 @@
 import React from "react";
-import SingleDayDetail from "./SingleDayDetail";
-import SingleDaySummary from "./SingleDaySummary";
+import {SingleDaySummary, SingleDayDetail} from "./SingleDay";
 import {SingleDayData} from "./SingleDayData";
 
-import './Weather.scss';
+import './weather.scss';
 
 export function Weather() {
 
-    const mondayData: SingleDayData = {  
+    const tempData: SingleDayData = {  
         marsSolDate: '344',
         earthSolDate: '14th',
         averageTemp: -67.108,
@@ -16,31 +15,21 @@ export function Weather() {
         averageWindSpeed: 5.3,
         windDirection: 'SSE',
         averagePressure: 681.448,
-        weekdayName: 'Mon'
-    }
-
-    const tempData: SingleDayData = {  
-        marsSolDate: '345',
-        earthSolDate: '15th',
-        averageTemp: -47.108,
-        minTemp: -199.926,
-        maxTemp: -8.287,
-        averageWindSpeed: 5.3,
-        windDirection: 'SSE',
-        averagePressure: 681.448,
-        weekdayName: 'Tue' 
+        weekdayName: 'Monday' // TODO calc via function
     }
 
     return (
-        <div className="weather-page">
-            <h1 className="title">Latest Weather at Elysium Planitia</h1>
+        <div>
+            <h1 className="weather-page-title">Latest Weather at Elysium Planitia</h1>
      
-            <div className="seven-day-display">
+            <div className="weather-page-seven-day-carousel">
 
-                <SingleDayDetail {...mondayData}/>  
-                
+                <div className="summary">
+                    <SingleDayDetail {...tempData}/>  
+                </div>    
+               
                 <div className="carousel">
-                    <SingleDaySummary {...mondayData}/>
+                    <SingleDaySummary {...tempData}/>
                     <SingleDaySummary {...tempData}/>
                     <SingleDaySummary {...tempData}/>
                     <SingleDaySummary {...tempData}/>
@@ -50,6 +39,9 @@ export function Weather() {
                 </div>
                       
             </div>
+
+            
+
         </div>
     );
 }

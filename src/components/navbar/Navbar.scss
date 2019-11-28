@@ -1,0 +1,14 @@
+@import '../../style/constants.scss';
+
+.navbar {
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0px;
+    justify-content: space-evenly;
+}
+
+.nav-element {
+    text-decoration: none;
+    color: $color-foreground;
+    margin: 10px;
+}

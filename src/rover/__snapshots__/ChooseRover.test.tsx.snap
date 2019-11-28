@@ -15,7 +15,6 @@ exports[`ChooseRover Component Should render without errors 1`] = `
       onClick={[Function]}
     >
       <img
-        alt="rover"
         className="roverImage"
         src="/images/curioisity_rover.jpg"
       />
@@ -28,9 +27,8 @@ exports[`ChooseRover Component Should render without errors 1`] = `
       onClick={[Function]}
     >
       <img
-        alt="rover"
         className="roverImage"
-        src="/images/curioisity_rover.jpg"
+        src="/images/opportunity_rover.jpg"
       />
       <h3>
         Opportunity
@@ -41,9 +39,8 @@ exports[`ChooseRover Component Should render without errors 1`] = `
       onClick={[Function]}
     >
       <img
-        alt="rover"
         className="roverImage"
-        src="/images/curioisity_rover.jpg"
+        src="/images/spirit_rover.jpg"
       />
       <h3>
         Spirit

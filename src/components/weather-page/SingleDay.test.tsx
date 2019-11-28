@@ -1,7 +1,6 @@
 import React from 'react';
-import Renderer from 'react-test-renderer/shallow';
-import SingleDayDetail from './SingleDayDetail';
-import SingleDaySummary from './SingleDaySummary';
+import renderer from 'react-test-renderer';
+import { SingleDayDetail, SingleDaySummary } from './SingleDay';
 import { SingleDayData } from './SingleDayData';
 
 describe("Single Day Summary Component", () => {
@@ -18,12 +17,12 @@ describe("Single Day Summary Component", () => {
             weekdayName: 'Monday' // TODO calc via function
         }
 
-        const renderer = new Renderer();
-        const component = renderer.render(
+        const component = renderer.create(
             <SingleDaySummary {...testData}/>
         );
         
-        expect(component).toMatchSnapshot();
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
     });
 });
 
@@ -41,11 +40,11 @@ describe("Single Day Detail Component", () => {
             weekdayName: 'Monday' // TODO calc via function
         }
 
-        const renderer = new Renderer();
-        const component = renderer.render(
+        const component = renderer.create(
             <SingleDayDetail {...testData}/>
         );
         
-        expect(component).toMatchSnapshot();
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
     });
 });

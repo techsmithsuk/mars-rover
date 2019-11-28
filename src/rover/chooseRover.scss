@@ -2,19 +2,28 @@
 
 .chooseRover{ 
 
-    min-width: 300px;
-    max-width: 800px;
-    margin: auto;
-    flex-grow: 1;
-
-    @media screen and (min-width: $large-desktop-breakpoint) {
-        flex-grow: 0;
-    }
-
     text-align: center;
 
     .roverImage {
-       @include imageDimensions;
+        border-radius: 50%;
+        width: 80px;
+        height:80px;
+
+        @media screen and (min-width: $phone-breakpoint) {
+            width: 110px;
+            height: 110px;
+        }
+
+        @media screen and (min-width: $tablet-breakpoint) {
+            width: 140px;
+            height: 140px;
+        }
+
+        @media screen and (min-width: $desktop-breakpoint) {
+            width: 170px;
+            height: 170px;
+        }
+
     }
 
     .roverOptions {
@@ -29,14 +38,13 @@
 
     .allRovers {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-evenly;
 
         @media screen and (min-width: $phone-breakpoint) {
             justify-content: center;
         }
 
-        @media screen and (min-width: $large-desktop-breakpoint) {
+        @media screen and (min-width: $desktop-breakpoint) {
             flex-direction: column;
             align-items: center;
         }

@@ -10,28 +10,3 @@ $desktop-breakpoint: 992px;
 $large-desktop-breakpoint: 1200px; 
 
 
-$wh-image-phone: 100px;
-$wh-image-tablet: 110px;
-$wh-image-desktop: 160px;
-
-@mixin imageDimensions {
-    border-radius: 50%;
-    width: 80px;
-    height:80px;
-
-    @media screen and (min-width: $phone-breakpoint) {
-        width: $wh-image-phone;
-        height: $wh-image-phone;
-    }
-
-    @media screen and (min-width: $tablet-breakpoint) {
-        width: $wh-image-tablet;
-        height: $wh-image-tablet;
-    }
-
-    @media screen and (min-width: $desktop-breakpoint) {
-        width: $wh-image-desktop;
-        height: $wh-image-desktop;
-    }
-    
-}

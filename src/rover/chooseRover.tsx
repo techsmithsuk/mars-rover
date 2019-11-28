@@ -1,21 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './chooseRover.scss';
-import { rovers } from './marsRover';
 
-export function ChooseRover(props: ChooseRoverProps) {
+export function ChooseRover() {
+    const [rover, setRover] = useState("");
+   
     return (
         <div className="chooseRover">
             <h2>Choose your Rover</h2>
-            <div className = "allRovers">
-                {rovers.map(roverObject => <RoverCard key={roverObject.name} roverName={roverObject.name} roverImage='/images/curioisity_rover.jpg' onRoverSelected={props.setRover} selectedRover={props.rover}/>)}   
+            <div className="allRovers">
+                <RoverCard roverName="Curiosity" roverImage='/images/curioisity_rover.jpg' onRoverSelected={setRover} selectedRover={rover}/>
+                <RoverCard roverName="Opportunity" roverImage='/images/opportunity_rover.jpg' onRoverSelected={setRover} selectedRover={rover}/>
+                <RoverCard roverName="Spirit" roverImage='/images/spirit_rover.jpg' onRoverSelected={setRover} selectedRover={rover}/>
             </div>
         </div>
     )
-}
-
-interface ChooseRoverProps {
-    rover: string;
-    setRover: (rover: string) => void;   
 }
 
 interface RoverCardProps {
@@ -35,7 +33,7 @@ function RoverCard(props: RoverCardProps) {
 
     return (
         <div className={getClassName()} onClick={() => props.onRoverSelected(props.roverName)}>
-            <img className="roverImage" src={props.roverImage} alt="rover"></img>
+            <img className="roverImage" src={props.roverImage}></img>
             <h3>{props.roverName}</h3>
         </div>
     );
