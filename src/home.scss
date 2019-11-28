@@ -63,4 +63,16 @@ $borderWidth: 5px;
         animation-fill-mode: forwards;  
         @include homePageFont();
     }
+
+    .link {
+        text-decoration: inherit;
+        &:visited {
+            color: $color-foreground;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+
 }
