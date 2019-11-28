@@ -9,18 +9,22 @@ import CloudIcon from './resources/svg_icon_cloud';
 import SunIcon from './resources/svg_icon_sun';
 import WindIcon from './resources/svg_icon_wind';
 
-export default function SingleDayDetail(props : SingleDayData) {  
+interface SingleDataDetailProps{
+    data : SingleDayData;
+}
 
-    const min = formatTemperature(props.minTemp);
-    const max = formatTemperature(props.maxTemp);
+export default function SingleDayDetail(props : SingleDataDetailProps) {  
+
+    const min = formatTemperature(props.data.minTemp);
+    const max = formatTemperature(props.data.maxTemp);
     
     return (
         <div className="SingleDayDetail">            
 
             <div className="weekdayBlock">
                 <p>DATE</p>
-                <p>{props.weekdayName} {props.earthSolDate}</p>
-                <p>MARS SOL {props.marsSolDate}</p>  
+                <p>{props.data.weekdayName} {props.data.earthSolDate}</p>
+                <p>MARS SOL {props.data.marsSolDate}</p>  
             </div> 
 
             <div className="tempBlock">                
@@ -32,8 +36,8 @@ export default function SingleDayDetail(props : SingleDayData) {
 
             <div className="windBlock">
                 <WindIcon/>  
-                <p>{props.averageWindSpeed} mph</p>
-                <p>{props.windDirection}</p>
+                <p>{props.data.averageWindSpeed} mph</p>
+                <p>{props.data.windDirection}</p>
             </div>
 
             <p className="textBlock">

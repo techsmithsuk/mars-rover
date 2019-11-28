@@ -20,7 +20,7 @@ describe("Single Day Summary Component", () => {
 
         const renderer = new Renderer();
         const component = renderer.render(
-            <SingleDaySummary {...testData}/>
+            <SingleDaySummary data = {testData}/>
         );
         
         expect(component).toMatchSnapshot();
@@ -43,7 +43,7 @@ describe("Single Day Detail Component", () => {
 
         const renderer = new Renderer();
         const component = renderer.render(
-            <SingleDayDetail {...testData}/>
+            <SingleDayDetail data = {testData}/>
         );
         
         expect(component).toMatchSnapshot();

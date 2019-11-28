@@ -9,9 +9,13 @@ import CloudIcon from './resources/svg_icon_cloud';
 import SunIcon from './resources/svg_icon_sun';
 import WindIcon from './resources/svg_icon_wind';
 
-export default function SingleDaySummary(props : SingleDayData) {
+interface SingleDataDetailProps{
+    data: SingleDayData;
+}
+
+export default function SingleDaySummary(props : SingleDataDetailProps) {
         
-    const avTemp = formatTemperature(props.averageTemp);
+    const avTemp = formatTemperature(props.data.averageTemp);
 
     return (
         <div className="SingleDaySummary">            
@@ -19,7 +23,7 @@ export default function SingleDaySummary(props : SingleDayData) {
             <div className="selection-highlight"></div>
 
             <div className="weekday">
-                {props.weekdayName}
+                {props.data.weekdayName}
             </div>
 
             <div className="icon">
@@ -27,7 +31,7 @@ export default function SingleDaySummary(props : SingleDayData) {
             </div>
             
             <div className="averageTemp">
-                {avTemp + "°C"}                   
+                {avTemp}                   
             </div>   
                       
         </div>
