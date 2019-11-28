@@ -9,17 +9,20 @@ import { Navbar } from './components/navbar/Navbar';
 export function App(): ReactElement {
   return (
     <Router>
-      <Navbar/>
+     
       <Switch>
         <Route path="/weather">
+          <Navbar/>
           <Weather />
         </Route>
 
         <Route path="/missions">
+          <Navbar/>
           <MissionPage/>
         </Route>
 
         <Route path="/rovers">
+          <Navbar/>
           <MarsRover />
         </Route>
 
