@@ -25,10 +25,7 @@ export function MissionScrollBar(props: MissionScrollProps) {
         <div className="MissionScrollBar">
             <div className="scrollbar">
                 {landingList.map(landingSight =>
-                    <div className="card" onClick={() => handleClick(landingSight.name)}>
-
-
-                        
+                    <div className="card" onClick={() => handleClick(landingSight.name)}>                        
                         <img src={landingSight.imageSrc}/>
                         <p className={getClassName(landingSight.name)}>
                             {landingSight.name}

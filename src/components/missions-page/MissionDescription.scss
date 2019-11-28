@@ -2,15 +2,14 @@
 
 
 
-.MissionDescription {
-  margin-top: $standard-margin;
+.MissionDescription {  
   color: $color-foreground;
   .mission-image{
     width: 100%;
   }
 
   .launch {
-   color: $color-secondary;
+    color: $color-secondary;
     font-weight: bold;
   }
 
@@ -31,10 +30,10 @@
   }
 }
 
-@mixin popUpStyles {
+@mixin popUpStyles {  
   @media screen and (max-width: 560px) {
     display: none;      
-  }
+  } 
 
   background-color: $color-background;
   color: $color-background;
@@ -43,12 +42,12 @@
   border-radius: 2px;
 
   display: inline;
-  width: 400px;
+  width: 420px;
   position: absolute;
   top: 200px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
 .left {
   @include popUpStyles();
   left: 5%;
@@ -58,4 +57,10 @@
   @include popUpStyles();
   right: 5%;
 }
+
+.invisible {
+  display: none
+}
+
+
 }

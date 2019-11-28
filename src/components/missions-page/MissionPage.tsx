@@ -3,9 +3,6 @@ import {MissionMap} from './MissionMap'
 import {MissionScrollBar} from './MissionScrollBar'
 import {MissionDescription} from './MissionDescription';
 
-
-
-
 export interface Mission {
     name: string,
     x: string,
@@ -16,7 +13,6 @@ export interface Mission {
     moreInfoUrl: string,
     description: string,
 }
-
 
 export const landingList: Mission[] = [{
     name: "Phoenix",
@@ -64,7 +60,7 @@ export const landingList: Mission[] = [{
         launched: "Dec 04, 1996",
         landed: "Jul 4, 1997",
         moreInfoUrl: "https://www.nasa.gov/mission_pages/mars-pathfinder",
-        description: "Mars Pathfinder was designed to be a demonstration of the technology necessary to deliver a lander and a free-ranging robotic rover to the surface of Mars in a cost-effective and efficient manner. The lander, formally named the Carl Sagan Memorial Station following its successful touchdown, and the rover, named Sojourner after American civil rights crusader Sojourner Truth, both outlived their design lives — the lander by nearly three times, and the rover by 12 times. Mars Pathfinder returned 2.3 billion bits of information, including more than 16,500 images from the lander and 550 images from the rover, as well as more than 15 chemical analyses of rocks and soil and extensive data on winds and other weather factors."
+        description: "Mars Pathfinder was designed to be a demonstration of the technology necessary to deliver a lander and a free-ranging robotic rover to the surface of Mars in a cost-effective and efficient manner. The lander, formally named the Carl Sagan Memorial Station following its successful touchdown, and the rover, named Sojourner after American civil rights crusader Sojourner Truth."
     },
     {
         name: "ExoMars", x: "500", y: "225",
@@ -84,7 +80,7 @@ export const landingList: Mission[] = [{
         moreInfoUrl: "https://www.nasa.gov/mission_pages/mer/index.html",
         description: "Primary among the mission's scientific goals is to search for and characterize a wide range of rocks and soils that hold clues to past water activity on Mars. The spacecraft are targeted to sites on opposite sides of Mars that appear to have been affected by liquid water in the past. The landing sites are at Gusev Crater, a possible former lake in a giant impact crater, and Meridiani Planum, where mineral deposits (hematite) suggest Mars had a wet past.\n" +
             "\n" +
-            "After the airbag-protected landing craft settled onto the surface and opened, the rovers rolled out to take panoramic images. These images give scientists the information they need to select promising geological targets that tell part of the story of water in Mars' past. Then, the rovers drive to those locations to perform on-site scientific investigations."
+            "After the airbag-protected landing craft settled onto the surface and opened, the rovers rolled out to take panoramic images."
     },
     {
         name: "Mars6",
@@ -126,7 +122,7 @@ export const landingList: Mission[] = [{
             "\n" +
             "The spacecraft was successfully deployed from the Mars Express on 19 December 2003 and was scheduled to land on the surface of Mars on 25 December; however, no contact was received at the expected time of landing on Mars. ESA declared the mission lost in February 2004, after numerous attempts to contact the spacecraft were made.[4]\n" +
             "\n" +
-            "The Beagle 2's fate remained a mystery until January 2015 when it was located on the surface of Mars in a series of images from NASA's Mars Reconnaissance Orbiter HiRISE camera.[5][6] The images suggest that it landed safely, but two of the spacecraft's four solar panels failed to deploy, blocking the spacecraft's communications antenna."
+            "The Beagle 2's fate remained a mystery until January 2015 when it was located on the surface of Mars in a series of images from NASA's Mars Reconnaissance Orbiter HiRISE camera."
     },
     {
         name: "Viking2",
@@ -166,7 +162,7 @@ export const landingList: Mission[] = [{
         moreInfoUrl: "https://www.nasa.gov/mission_pages/mer/index.html",
         description: "Primary among the mission's scientific goals is to search for and characterize a wide range of rocks and soils that hold clues to past water activity on Mars. The spacecraft are targeted to sites on opposite sides of Mars that appear to have been affected by liquid water in the past. The landing sites are at Gusev Crater, a possible former lake in a giant impact crater, and Meridiani Planum, where mineral deposits (hematite) suggest Mars had a wet past.\n" +
             "\n" +
-            "After the airbag-protected landing craft settled onto the surface and opened, the rovers rolled out to take panoramic images. These images give scientists the information they need to select promising geological targets that tell part of the story of water in Mars' past. Then, the rovers drive to those locations to perform on-site scientific investigations."
+            "After the airbag-protected landing craft settled onto the surface and opened, the rovers rolled out to take panoramic images. Then, the rovers drive to those locations to perform on-site scientific investigations."
     },
     {
         name: "MarsPolarLander",
@@ -183,14 +179,16 @@ function getMission(name: string): Mission | undefined {
     return landingList.find(mission => mission.name === name);
 }
 
-function getClassName(selectedId: string) {
+function getClassName(selectedId: string, popUpStatus: boolean) {
+
+    if (!popUpStatus) {
+        return "invisible";
+    }
 
     const mission = getMission(selectedId);
 
-    if (mission) {
-
-        console.log(mission.x);
-
+    if (mission) {      
+        
         if (Number(mission.x) < 551){    
             return "right";
         } 
@@ -203,16 +201,23 @@ function getClassName(selectedId: string) {
 }
 
 
+
+
 export function MissionPage() {
     const [selectedId, setSelectedId] = useState("Phoenix");
+    const [showPopUp, setShowPopUp] = useState(true);
+ 
+    function changeSelectedId(id: string){
+        setSelectedId(id);
+        setShowPopUp(true);
+    }
 
     return (
         <div>
             <h1>EXCITING MISSIONS ON THE AMAZING RED PLANET OF MARS </h1>
-            <MissionMap setSelectedId={setSelectedId} selectedId={selectedId}/>
-            <MissionScrollBar selectMissionCard={setSelectedId} selectedCard={selectedId}/>
-            <div className={getClassName(selectedId)}><MissionDescription mission={getMission(selectedId)}/></div>
-            
+            <MissionMap setSelectedId={changeSelectedId} selectedId={selectedId}/>
+            <MissionScrollBar selectMissionCard={changeSelectedId} selectedCard={selectedId}/>        
+            <div className={getClassName(selectedId, showPopUp)} onClick={() => setShowPopUp(false)}> <MissionDescription mission={getMission(selectedId)}/></div>
         </div>
     )
 }
