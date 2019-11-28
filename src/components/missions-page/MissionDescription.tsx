@@ -7,6 +7,10 @@ interface MissionDescriptionProps {
     mission: Mission | undefined;
 }
 
+function truncateString(string : string, number : number) {
+    return string.slice(0, number) + "...";
+  }
+
 export function MissionDescription(props: MissionDescriptionProps) {
     if (!props.mission) {
         return <div>Couldn't find that mission</div>
@@ -18,7 +22,7 @@ export function MissionDescription(props: MissionDescriptionProps) {
             <div className="info">
                 <p className="launch">Launched: {props.mission.launched}</p>
                 <p className="launch">Landed: {props.mission.landed}</p>
-                <p>{props.mission.description}</p>
+                <p>{truncateString(props.mission.description, 250)}</p>
                 <a  className="moreInfo" href={props.mission.moreInfoUrl}>More info</a>
             </div>
 

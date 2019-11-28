@@ -35,6 +35,8 @@
     display: none;      
   } 
 
+ 
+
   background-color: $color-background;
   color: $color-background;
 
@@ -45,17 +47,21 @@
   width: 420px;
   position: absolute;
   top: 200px;
+
+  img {    
+    height: 400px;
+  }
 }
 
 @media (min-width: 1400px) {
 .left {
   @include popUpStyles();
-  left: 5%;
+  left: 10%;
 }
 
 .right {
   @include popUpStyles();
-  right: 5%;
+  right: 10%;
 }
 
 .invisible {
