@@ -1,5 +1,7 @@
 @import '../../style/constants';
 
+
+
 .MissionScrollBar{
     .scrollbar{
         display: flex;
@@ -7,7 +9,7 @@
         min-width: 100%;
         min-height: auto;
         overflow-x: auto;
-        padding: 10px 0;
+        padding: ($standard-margin * 2) 0;
         img {
             display: none;
         }
@@ -26,20 +28,18 @@
     .card--content {
         background-color: $button-primary;
         min-width: auto;
-        margin: 0px 5px 5px 5px;
+        margin: 0px $standard-margin $standard-margin $standard-margin;
         height:40px;
         text-align: center;
         line-height: 40px;
-        padding: 0 10px;
-        border-radius: 5px;
+        padding: 0 ($standard-margin * 2);
+        border-radius: $standard-margin;
         &:hover{
             cursor: pointer;
         }
         @media (min-width: 768px) {
             border-radius: 0;
-            margin: -4px 0 0 0;
-            
-
+            margin: -4px 0 0 0;      
         }
     }
     .card--content-selected{
@@ -48,8 +48,8 @@
 
     .card {
         @media (min-width: 768px) {
-            border-radius: 5px;
-            margin: 5px;
+            border-radius: $standard-margin;
+            margin: $standard-margin;
             overflow: hidden;
             height: 240px;
             min-width: 200px;

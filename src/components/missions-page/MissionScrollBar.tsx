@@ -2,16 +2,10 @@ import React from 'react';
 import './MissionScrollBar.scss'
 import {landingList} from './MissionPage'
 
-
 interface MissionScrollProps {
     selectedCard: string;
     selectMissionCard: (id: string) => void;
 }
-
-// interface MissionScrollBar {
-//     selectedCard: string;
-//     selectMissionCard: (id:string ) => void;
-// }
 
 export function MissionScrollBar(props: MissionScrollProps) {
 

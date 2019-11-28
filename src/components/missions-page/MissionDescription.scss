@@ -1,7 +1,9 @@
 @import '../../style/constants.scss';
 
+
+
 .MissionDescription {
-  margin-top: 5px;
+  margin-top: $standard-margin;
   color: $color-foreground;
   .mission-image{
     width: 100%;
@@ -13,7 +15,7 @@
   }
 
   .info {
-    padding: 5px;
+    padding: $standard-margin;
     display: flex;
     flex-direction: column;
   }
@@ -21,12 +23,10 @@
   .moreInfo {
     background-color: $button-primary;
     text-align: center;
-    padding: 5px;
+    padding: $standard-margin;
     color: $color-foreground;
     font-weight: bold;
     flex: 1;
-    border-radius: 5px;
+    border-radius: $standard-margin;
   }
-
-
 }
