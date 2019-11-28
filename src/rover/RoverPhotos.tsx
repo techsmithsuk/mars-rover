@@ -1,25 +1,44 @@
-import React from 'react';
-import {fetchData} from '../helpers/ApiCall'
-import { tsPropertySignature } from '@babel/types';
+import React, { useState, useEffect } from 'react';
+import { fetchData } from '../helpers/ApiCall'
+import "./RoverPhotos.scss"
 
-interface RoverPhotosProps{
+interface RoverPhotosProps {
     rover: string,
     camera: string
 }
 
+interface Photo {
+    img_src: string
+}
 
-export function RoverPhotos(props: RoverPhotosProps){
+export function RoverPhotos(props: RoverPhotosProps) {
 
+    const [photos, setPhotos] = useState<Photo[]>([]);
+    const [error, setError] = useState(false);
     const name = props.rover.toLowerCase();
     const camera = props.camera.toLowerCase();
+    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${name}/photos?sol=1000&camera=${camera}&api_key=3MzewCaMo3w75FEoQJ9m1ABVKf0Pe6ArnDKd18Ca`;
 
-    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/`+ {name} +`/photos?sol=1000&camera=` + + `&api_key=DEMO_KEY`
-    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/` + {name} + `/photos?earth_date=2015-6-3&api_key=DEMO_KEY`
+    useEffect(() => {
+        fetchData(url)
+            .then(jsonResponse => setPhotos(jsonResponse.photos))
+            .then(jsonResponse => console.log(jsonResponse))
+            .catch(err => setError(err))
+    }, [props.camera]);
 
-    const jsonResponse = fetchData()
-    
+    if (!photos) {
+        return <div></div>;
+    }
 
+    if (photos.length <= 0) {
+        return <div className="no-photos">No photos found</div>;
+    }
 
+    return (
+        <div className="RoverPhotos">
+            {photos.map(photo =>
 
-    return <div>Photos</div>
+                <img className="rover-image" src={photo.img_src} />)}
+        </div>
+    );
 }

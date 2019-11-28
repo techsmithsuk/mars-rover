@@ -13,8 +13,7 @@
     }
 
     .cameraOptions {
-        min-width: 30%;
-        opacity: 0.5;
+        @include imageOpacity;
 
     }
 
