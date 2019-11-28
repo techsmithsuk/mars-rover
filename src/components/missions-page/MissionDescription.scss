@@ -1,7 +1,5 @@
 @import '../../style/constants.scss';
 
-
-
 .MissionDescription {  
   color: $color-foreground;
   .mission-image{
@@ -31,11 +29,6 @@
 }
 
 @mixin popUpStyles {  
-  @media screen and (max-width: 560px) {
-    display: none;      
-  } 
-
- 
 
   background-color: $color-background;
   color: $color-background;
@@ -53,20 +46,38 @@
   }
 }
 
-@media (min-width: 1400px) {
-.left {
-  @include popUpStyles();
-  left: 10%;
+@media (min-width: 1000px){
+  .left {
+    @include popUpStyles();   
+    left: 10%;
+  }
+
+  .right {
+    @include popUpStyles();    
+    right: 10%;
+  }
+
+  img {   
+    display:none;
+  }
 }
 
-.right {
-  @include popUpStyles();
-  right: 10%;
+@media (min-width: 1700px) {
+  .left {
+    @include popUpStyles();    
+    left: 10%;
+  }
+
+  .right {
+    @include popUpStyles();   
+    right: 10%;
+  }
+
+  img {    
+    display:block;
+  }
 }
 
 .invisible {
   display: none
-}
-
-
 }

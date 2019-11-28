@@ -200,9 +200,6 @@ function getClassName(selectedId: string, popUpStatus: boolean) {
     return "MissionDescription";
 }
 
-
-
-
 export function MissionPage() {
     const [selectedId, setSelectedId] = useState("Phoenix");
     const [showPopUp, setShowPopUp] = useState(true);

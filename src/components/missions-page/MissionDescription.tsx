@@ -2,7 +2,6 @@ import React from 'react'
 import {Mission} from './MissionPage';
 import './MissionDescription.scss';
 
-
 interface MissionDescriptionProps {
     mission: Mission | undefined;
 }
