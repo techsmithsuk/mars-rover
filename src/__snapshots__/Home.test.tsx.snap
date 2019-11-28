@@ -12,21 +12,34 @@ exports[`Home Component Should render without errors 1`] = `
   <div
     className="sections"
   >
-    <section
-      className="missions"
+    <a
+      className="link missions"
+      href="/missions"
+      onClick={[Function]}
     >
-      Missions
-    </section>
-    <section
-      className="weather"
+      <section>
+        Missions
+      </section>
+    </a>
+    <a
+      className="link weather"
+      href="/weather"
+      onClick={[Function]}
     >
-      Weather
-    </section>
-    <section
-      className="photos"
+      <section>
+        Weather
+      </section>
+    </a>
+    <a
+      className="link photos"
+      href="/rovers"
+      onClick={[Function]}
     >
-      Photos
-    </section>
+       
+      <section>
+        Photos
+      </section>
+    </a>
   </div>
 </div>
 `;
