@@ -2,14 +2,16 @@ import React from 'react';
 import {SingleDayData} from './SingleDayData';
 import './SingleDaySummary.scss';
 
+import formatTemperature from '../../helpers/FormatTemperature';
+
 import ThermometerIcon from './resources/svg_icon_thermometer';
 import CloudIcon from './resources/svg_icon_cloud';
 import SunIcon from './resources/svg_icon_sun';
 import WindIcon from './resources/svg_icon_wind';
 
 export default function SingleDaySummary(props : SingleDayData) {
-    
-    let avTemp = props.averageTemp ? Math.round(props.averageTemp) : 0;   
+        
+    const avTemp = formatTemperature(props.averageTemp);
 
     return (
         <div className="SingleDaySummary">            
