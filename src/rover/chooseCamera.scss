@@ -9,25 +9,7 @@
     text-align: center;
 
     .cameraImage {
-        border-radius: 50%;
-        width: 80px;
-        height:80px;
-
-        @media screen and (min-width: $phone-breakpoint) {
-            width: $wh-image-phone;
-            height: $wh-image-phone;
-        }
-
-        @media screen and (min-width: $tablet-breakpoint) {
-            width: $wh-image-tablet;
-            height: $wh-image-tablet;
-        }
-
-        @media screen and (min-width: $desktop-breakpoint) {
-            width: $wh-image-desktop;
-            height: $wh-image-desktop;
-        }
-
+        @include imageDimensions;
     }
 
     .cameraOptions {
