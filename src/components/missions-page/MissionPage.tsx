@@ -4,6 +4,8 @@ import {MissionScrollBar} from './MissionScrollBar'
 import {MissionDescription} from './MissionDescription';
 
 
+
+
 export interface Mission {
     name: string,
     x: string,
@@ -181,14 +183,36 @@ function getMission(name: string): Mission | undefined {
     return landingList.find(mission => mission.name === name);
 }
 
+function getClassName(selectedId: string) {
+
+    const mission = getMission(selectedId);
+
+    if (mission) {
+
+        console.log(mission.x);
+
+        if (Number(mission.x) < 551){    
+            return "right";
+        } 
+        else {
+            return "left";
+        }
+    }
+
+    return "MissionDescription";
+}
+
+
 export function MissionPage() {
-    const [selectedId, setSelectedId] = useState("");
+    const [selectedId, setSelectedId] = useState("Phoenix");
 
     return (
         <div>
+            <h1>EXCITING MISSIONS ON THE AMAZING RED PLANET OF MARS </h1>
             <MissionMap setSelectedId={setSelectedId} selectedId={selectedId}/>
             <MissionScrollBar selectMissionCard={setSelectedId} selectedCard={selectedId}/>
-            <MissionDescription mission={getMission(selectedId)}/>
+            <div className={getClassName(selectedId)}><MissionDescription mission={getMission(selectedId)}/></div>
+            
         </div>
     )
 }
