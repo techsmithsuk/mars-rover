@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MarsRover Component Should render without errors 1`] = `
+<div
+  className="roverBox"
+>
+  <div
+    className="chooseRover"
+  >
+    <h2>
+      Choose your Rover
+    </h2>
+    <div
+      className="allRovers"
+    >
+      <div
+        className="roverOptions"
+        onClick={[Function]}
+      >
+        <img
+          className="roverImage"
+          src="/images/curioisity_rover.jpg"
+        />
+        <h3>
+          Curiosity
+        </h3>
+      </div>
+      <div
+        className="roverOptions"
+        onClick={[Function]}
+      >
+        <img
+          className="roverImage"
+          src="/images/opportunity_rover.jpg"
+        />
+        <h3>
+          Opportunity
+        </h3>
+      </div>
+      <div
+        className="roverOptions"
+        onClick={[Function]}
+      >
+        <img
+          className="roverImage"
+          src="/images/spirit_rover.jpg"
+        />
+        <h3>
+          Spirit
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+`;
