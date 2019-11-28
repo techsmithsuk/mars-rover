@@ -18,6 +18,7 @@ exports[`MarsRover Component Should render without errors 1`] = `
         onClick={[Function]}
       >
         <img
+          alt="rover"
           className="roverImage"
           src="/images/curioisity_rover.jpg"
         />
@@ -30,8 +31,9 @@ exports[`MarsRover Component Should render without errors 1`] = `
         onClick={[Function]}
       >
         <img
+          alt="rover"
           className="roverImage"
-          src="/images/opportunity_rover.jpg"
+          src="/images/curioisity_rover.jpg"
         />
         <h3>
           Opportunity
@@ -42,8 +44,9 @@ exports[`MarsRover Component Should render without errors 1`] = `
         onClick={[Function]}
       >
         <img
+          alt="rover"
           className="roverImage"
-          src="/images/spirit_rover.jpg"
+          src="/images/curioisity_rover.jpg"
         />
         <h3>
           Spirit
@@ -51,5 +54,6 @@ exports[`MarsRover Component Should render without errors 1`] = `
       </div>
     </div>
   </div>
+  <div />
 </div>
 `;
