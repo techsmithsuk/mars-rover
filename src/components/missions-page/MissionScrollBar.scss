@@ -2,6 +2,7 @@
 
 .MissionScrollBar{
     .scrollbar{
+        position: relative;
         display: flex;
         min-width: 100%;
         overflow-x: auto;
@@ -49,5 +50,21 @@
             min-width: 200px;
             overflow-y: hidden;
         }
+    }
+    .arrowIcon-left{
+        position: absolute;
+        color:$color-foreground;
+        font-size: 100px;
+        top:-30px;
+        left:0px;
+        opacity: 50%;
+    }
+    .arrowIcon-right{
+        position: absolute;
+        color:$color-foreground;
+        font-size: 100px;
+        top:-30px;
+        right:0px;
+        opacity: 50%;
     }
 }
