@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200&dis|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700&dis');
 @import 'style/constants.scss';
 
 body {
@@ -6,12 +6,6 @@ body {
   color: $color-foreground;
   background-color: $color-background;
 }
-
-h1 {
-  color: $color-primary;
-  font-family: 'Open Sans', sans-serif;
-}
-
 
 a {
   text-decoration: none;

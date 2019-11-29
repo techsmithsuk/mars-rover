@@ -8,10 +8,11 @@ $summary-total-width: ($summary-width * 7);
 
 .SingleDayDetail {
     @include flex-row;
-    @include box-styling;
+    @include box-gradient-hover;  
 
     align-items: center;
     height: $detail-height * 3;
+    border: 2px solid $color-foreground;
               
     @include svg-icon;    
 
