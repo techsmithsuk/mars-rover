@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchData } from '../helpers/ApiCall'
+import { fetchData } from '../helpers/ApiDataCall'
 import "./RoverPhotos.scss"
 
 interface RoverPhotosProps {
@@ -17,7 +17,7 @@ export function RoverPhotos(props: RoverPhotosProps) {
     const [error, setError] = useState(false);
     const name = props.rover.toLowerCase();
     const camera = props.camera.toLowerCase();
-    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${name}/photos?sol=1000&camera=${camera}&api_key=3MzewCaMo3w75FEoQJ9m1ABVKf0Pe6ArnDKd18Ca`;
+    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${name}/photos?sol=100&camera=${camera}&api_key=3MzewCaMo3w75FEoQJ9m1ABVKf0Pe6ArnDKd18Ca`;
 
     useEffect(() => {
         fetchData(url)

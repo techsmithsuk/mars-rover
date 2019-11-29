@@ -7,13 +7,13 @@
         min-width: 100%;
         overflow-x: auto;
         padding: ($standard-margin * 2) 0;
-        img {
+        .scroll-image {
             display: none;
         }
         @media (min-width: 768px) {
             overflow-x: auto;
             justify-content: left;
-            img {
+            .scroll-image {
                 display: block;
                 height: 200px;
                 width: 200px;

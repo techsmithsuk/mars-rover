@@ -19,6 +19,12 @@ export async function fetchWeatherData(): Promise<SingleDayData[]> {
     return parseData(json);
 } 
 
+export async function fetchData(url: string) {
+    const response = await fetch(url);
+    const json = await response.json();
+    return json;
+}
+
 function parseData(apiJson: any): SingleDayData[] {
     const dayData: SingleDayData[] = [];
     const solKeys : string[] = apiJson['sol_keys'];
