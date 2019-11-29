@@ -42,7 +42,7 @@
     .card {
         @media (min-width: 768px) {
             border: 2px solid white;
-            border-radius: $standard-margin;
+            border-radius: 2px;
             margin: $standard-margin;
             overflow: hidden;
             height: 240px;
