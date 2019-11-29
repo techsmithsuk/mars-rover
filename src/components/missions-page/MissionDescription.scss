@@ -41,7 +41,7 @@
   position: absolute;
   top: 200px;
 
-  img {    
+  .mission-image {    
     height: 400px;
   }
 }
@@ -57,7 +57,7 @@
     right: 10%;
   }
 
-  img {   
+  .mission-image {   
     display:none;
   }
 }
@@ -73,7 +73,7 @@
     right: 10%;
   }
 
-  img {    
+  .mission-image {    
     display:block;
   }
 }
