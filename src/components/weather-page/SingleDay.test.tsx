@@ -2,11 +2,12 @@ import React from 'react';
 import Renderer from 'react-test-renderer/shallow';
 import SingleDayDetail from './SingleDayDetail';
 import SingleDaySummary from './SingleDaySummary';
-import { SingleDayData } from './SingleDayData';
+import { SingleDayData } from '../../helpers/ApiDataCall';
 
 describe("Single Day Summary Component", () => {
     it("Should render without errors", () => {
         const testData: SingleDayData = {  
+            id:1,
             marsSolDate: '344',
             earthSolDate: '14th',
             averageTemp: -67.108,
@@ -30,6 +31,7 @@ describe("Single Day Summary Component", () => {
 describe("Single Day Detail Component", () => {
     it("Should render without errors", () => {
         const testData: SingleDayData = {  
+            id:1,
             marsSolDate: '344',
             earthSolDate: '14th',
             averageTemp: -67.108,
