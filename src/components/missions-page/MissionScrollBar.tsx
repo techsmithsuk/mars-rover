@@ -1,6 +1,7 @@
 import React from 'react';
 import './MissionScrollBar.scss'
 import {landingList} from './MissionPage'
+import {ArrowIcon}from './resources/arrow-icon';
 
 interface MissionScrollProps {
     selectedCard: string;
@@ -23,15 +24,19 @@ export function MissionScrollBar(props: MissionScrollProps) {
     return (
 
         <div className="MissionScrollBar">
+   
             <div className="scrollbar">
-                {landingList.map(landingSight =>
-                    <div className="card" onClick={() => handleClick(landingSight.name)}>                        
-                        <img className="scroll-image"src={landingSight.imageSrc}/>
-                        <p className={getClassName(landingSight.name)}>
-                            {landingSight.name}
-                        </p>
-                    </div>)}
+                <p className="arrowIcon-left">⮈</p>
+                    {landingList.map(landingSight =>
+                        <div className="card" onClick={() => handleClick(landingSight.name)}>                        
+                            <img className="scroll-image"src={landingSight.imageSrc}/>
+                            <p className={getClassName(landingSight.name)}>
+                                {landingSight.name}
+                            </p>
+                        </div>)}
+                <p className="arrowIcon-right">⮊</p>
             </div>
+            
         </div>
     )
 }
