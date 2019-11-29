@@ -27,8 +27,7 @@
         height:40px;
         text-align: center;
         line-height: 40px;
-        padding: 0 ($standard-margin * 2);
-        border-radius: $standard-margin;
+        padding: 0 ($standard-margin * 2);        
         &:hover{
             cursor: pointer;
         }
