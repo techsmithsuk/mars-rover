@@ -18,7 +18,7 @@
   }
 
   .moreInfo {
-    background-color: $button-primary;
+    background-color: $color-primary;
     text-align: center;
     padding: $standard-margin;
     color: $color-foreground;
@@ -39,8 +39,9 @@
   background-color: $color-background;
   color: $color-background;
 
-  border: 8px solid $color-primary;
-  border-radius: 2px;
+  border: 2px solid $color-foreground;
+  border-radius: $standard-margin;
+  overflow:hidden;
 
   display: inline;
   width: 420px;
