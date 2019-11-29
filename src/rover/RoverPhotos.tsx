@@ -22,7 +22,6 @@ export function RoverPhotos(props: RoverPhotosProps) {
     useEffect(() => {
         fetchData(url)
             .then(jsonResponse => setPhotos(jsonResponse.photos))
-            .then(jsonResponse => console.log(jsonResponse))
             .catch(err => setError(err))
     }, [props.camera]);
 
