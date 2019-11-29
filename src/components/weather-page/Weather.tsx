@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SingleDayDetail from "./SingleDayDetail";
 import SingleDaySummary from "./SingleDaySummary";
 import {SingleDayData} from "./SingleDayData";
@@ -18,18 +18,32 @@ export function Weather() {
         averagePressure: 681.448,
         weekdayName: 'Mon'
     }
-
-    const tempData: SingleDayData = {  
+    const tuesdayData: SingleDayData = {  
         marsSolDate: '345',
         earthSolDate: '15th',
+        averageTemp: -32.234,
+        minTemp: -123.213,
+        maxTemp: -53.254,
+        averageWindSpeed: 45.6,
+        windDirection: 'NNW',
+        averagePressure: 765.454,
+        weekdayName: 'Tue'
+    }
+
+    const tempData: SingleDayData = {  
+        marsSolDate: '346',
+        earthSolDate: '16th',
         averageTemp: -47.108,
         minTemp: -199.926,
         maxTemp: -8.287,
         averageWindSpeed: 5.3,
         windDirection: 'SSE',
         averagePressure: 681.448,
-        weekdayName: 'Tue' 
+        weekdayName: 'Wed' 
     }
+
+    const [selected, setSelected] = useState(mondayData)
+
 
     return (
         <div className="weather-page">
@@ -37,16 +51,17 @@ export function Weather() {
      
             <div className="seven-day-display">
 
-                <SingleDayDetail {...mondayData}/>  
+                <SingleDayDetail data = {selected}/>  
                 
                 <div className="carousel">
-                    <SingleDaySummary {...mondayData}/>
-                    <SingleDaySummary {...tempData}/>
-                    <SingleDaySummary {...tempData}/>
-                    <SingleDaySummary {...tempData}/>
-                    <SingleDaySummary {...tempData}/>
-                    <SingleDaySummary {...tempData}/>
-                    <SingleDaySummary {...tempData}/>   
+                    <div onClick ={() => setSelected(mondayData)}><SingleDaySummary data = {mondayData}/></div>
+                    <div onClick ={() => setSelected(tuesdayData)}><SingleDaySummary data = {tuesdayData}/></div>
+                    <div onClick ={() => setSelected(tempData)}><SingleDaySummary data = {tempData}/></div>
+                    <div onClick ={() => setSelected(tempData)}><SingleDaySummary data = {tempData}/></div>
+                    <div onClick ={() => setSelected(tempData)}><SingleDaySummary data = {tempData}/></div>
+                    <div onClick ={() => setSelected(tempData)}><SingleDaySummary data = {tempData}/></div>
+                    <div onClick ={() => setSelected(tempData)}><SingleDaySummary data = {tempData}/></div>
+                      
                 </div>
                       
             </div>

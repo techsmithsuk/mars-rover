@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 export function HomePage() {
 
-
     return (
         <div className="homePage">
             <section className="home" > Welcome to the Mars Rover!</section>

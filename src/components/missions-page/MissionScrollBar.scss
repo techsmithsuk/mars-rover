@@ -1,0 +1,55 @@
+@import '../../style/constants';
+
+.MissionScrollBar{
+    .scrollbar{
+        display: flex;
+        background-color: #2c3e50;
+        min-width: 100%;
+        overflow-x: auto;
+        padding: ($standard-margin * 2) 0;
+        img {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            overflow-x: auto;
+            justify-content: left;
+            img {
+                display: block;
+                height: 200px;
+                width: 200px;
+            }
+        }
+    }
+
+    .card--content {
+        background-color: $button-primary;
+        min-width: auto;
+        margin: 0px $standard-margin $standard-margin $standard-margin;
+        height:40px;
+        text-align: center;
+        line-height: 40px;
+        padding: 0 ($standard-margin * 2);
+        border-radius: $standard-margin;
+        &:hover{
+            cursor: pointer;
+        }
+        @media (min-width: 768px) {
+            border-radius: 0;
+            margin: -4px 0 0 0;      
+        }
+    }
+    .card--content-selected{
+        background-color:$color-primary;
+    }
+
+    .card {
+        @media (min-width: 768px) {
+            border-radius: $standard-margin;
+            margin: $standard-margin;
+            overflow: hidden;
+            height: 240px;
+            min-width: 200px;
+            overflow-y: hidden;
+        }
+    }
+}
