@@ -57,9 +57,7 @@ exports[`Single Day Detail Component Should render without errors 1`] = `
 `;
 
 exports[`Single Day Summary Component Should render without errors 1`] = `
-<div
-  className="SingleDaySummary"
->
+<div>
   <div
     className="selection-highlight"
   />

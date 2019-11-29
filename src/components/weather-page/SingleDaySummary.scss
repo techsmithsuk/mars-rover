@@ -9,6 +9,10 @@
     margin-top: 8px;
 
     width: $summary-width;
+    @media (max-width: $weather-responsive){  
+        width:$summary--small-width;
+    }
+    
     height: $detail-height * 3;    
    
     text-align: center;
