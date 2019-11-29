@@ -21,6 +21,7 @@ $wh-image-tablet: 110px;
 $wh-image-desktop: 160px;
 
 @mixin imageDimensions {
+    border: 3px solid white;
     border-radius: 50%;
     width: 80px;
     height:80px;
@@ -40,4 +41,9 @@ $wh-image-desktop: 160px;
         height: $wh-image-desktop;
     }
     
+}
+
+@mixin imageOpacity {
+    min-width: 30%;
+    opacity: 0.3;
 }

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { ChooseRover } from './chooseRover'
 import { ChooseCamera } from './chooseCamera'
 import './marsRover.scss'
+import {RoverPhotos} from "./RoverPhotos"
 
 
 
@@ -13,9 +14,7 @@ export interface RoverObject{
 
 export const rovers  :RoverObject[] = [
     {name: "Curiosity",cameras: ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "MAHLI", "MARDI", "NAVCAM"]},
-
     {name: "Opportunity", cameras: ["FHAZ", "RHAZ", "NAVCAM", "PANCAM", "MINITES"]},
-
     {name: "Spirit", cameras: ["FHAZ", "RHAZ", "NAVCAM", "PANCAM", "MINITES"]}
     ];
 
@@ -28,12 +27,14 @@ export function MarsRover() {
         return rovers.find(rover => rover.name === roverName);
     }
 
-
     return (
+        <div>
             <div className="roverBox">
-            <ChooseRover rover={rover} setRover={setRover} />
-            <ChooseCamera getRover={getRover} rover={rover} camera={camera} setCamera={setCamera} />
+                <ChooseRover rover={rover} setRover={setRover} />
+                <ChooseCamera getRover={getRover} rover={rover} camera={camera} setCamera={setCamera} />
             </div>
+                <RoverPhotos rover={rover} camera={camera} />
+        </div>
     );
 }
 
