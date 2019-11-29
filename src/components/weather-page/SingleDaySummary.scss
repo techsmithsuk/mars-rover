@@ -7,6 +7,7 @@
     @include font-styles;     
    
     margin-top: 8px;
+    border: 2px solid $color-foreground;
 
     width: $summary-width;
     @media (max-width: $weather-responsive){  
@@ -32,15 +33,15 @@
     }
 
     &:hover {
-        @include box-gradient-hover;          
+        font-weight: 700;
         .selection-highlight {        
-            background-color: $color-red;
+            background-color: $color-foreground;
         }
     }      
 }
 .SingleDaySummarySelected {
-    @include box-gradient-hover;          
+    border-color: $color-primary;       
     .selection-highlight {        
-        background-color: $color-foreground;
+        background-color: $color-primary;
     }   
 }

@@ -18,10 +18,11 @@ $weather-responsive:550px;
 }
 
 @mixin box-gradient{
-    background: linear-gradient(90deg, rgba(230,230,230,0.1) 0%, rgba(255,255,255,0.15) 100%, rgba(220,220,220,0.1) 100%);
+    background: $color-background;
+    opacity: 1;
 }
 @mixin box-gradient-hover{
-    background: linear-gradient(90deg, rgba(230,230,230,0.2) 0%, rgba(255,255,255,0.3) 100%, rgba(220,220,220,0.2) 100%);
+    border-color: $color-primary;
 }
 
 @mixin box-styling{ 
@@ -40,7 +41,7 @@ $weather-responsive:550px;
 @mixin font-styles {
 
     text-transform: uppercase; 
-    font-weight: bold;   
+    font-weight: 300;   
     font-size: $font-size; 
 }
 
