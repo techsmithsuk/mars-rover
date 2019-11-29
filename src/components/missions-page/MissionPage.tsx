@@ -211,7 +211,7 @@ export function MissionPage() {
 
     return (
         <div>
-            <h1>EXCITING MISSIONS ON THE AMAZING RED PLANET OF MARS </h1>
+            <h1>Exciting Missions!</h1>
             <MissionMap setSelectedId={changeSelectedId} selectedId={selectedId}/>
             <MissionScrollBar selectMissionCard={changeSelectedId} selectedCard={selectedId}/>        
             <div className={getClassName(selectedId, showPopUp)} onClick={() => setShowPopUp(false)}> <MissionDescription mission={getMission(selectedId)}/></div>
