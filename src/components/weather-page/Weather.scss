@@ -4,16 +4,43 @@
 
 .weather-page{
 
+    display:block;
+
+    @media (min-width: 1250px){
+        display: inline-block;
+
+    }
+
     .title {
         color: $color-foreground;  
     }
 
     .seven-day-display {
-        width: $seven-day-width;    
+        width: $seven-day-width;  
+        @media (max-width: $weather-responsive){  
+            width:$seven-day-small-width;
+        }
     }
 
     .carousel {
         @include flex-row;
         justify-content: space-between;
     }
+}
+
+.weatherGraph{
+    
+    width: $seven-day-width;
+    max-width:700px;
+    margin-top:20px;
+    @media (max-width: $weather-responsive){  
+        width:$seven-day-small-width;
+    }
+    @media (min-width: 1250px){
+        width:90%;
+        height:368px;
+        margin-top:88px;
+        position:absolute;
+    }
+    
 }
