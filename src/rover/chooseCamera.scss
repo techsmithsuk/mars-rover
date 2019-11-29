@@ -18,7 +18,9 @@
     }
 
     .selected {
-        opacity: 1;
+        .cameraImage {
+            border-color: $color-primary;
+        }
     }
 
     .allCameras {
