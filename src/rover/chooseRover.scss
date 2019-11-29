@@ -23,8 +23,9 @@
     }
 
     .selected {
-        opacity: 1;
-        
+        .roverImage{
+            border-color: $color-primary;
+        }
     }
 
     .allRovers {
