@@ -1,69 +1,75 @@
 @import '../../style/constants';
 
-.MissionScrollBar{
-    .scrollbar{
-        position: relative;
-        display: flex;
-        min-width: 100%;
-        overflow-x: auto;
-        padding: ($standard-margin * 2) 0;
-        .scroll-image {
-            display: none;
-        }
-        @media (min-width: 768px) {
-            overflow-x: auto;
-            justify-content: left;
-            .scroll-image {
-                display: block;
-                height: 200px;
-                width: 200px;
-            }
-        }
+.MissionScrollBar {
+  display: flex;
+  width: 100%;
+
+  .scrollbar {
+    position: relative;
+    display: flex;
+    overflow: scroll;
+    padding: ($standard-margin * 2) 0;
+
+    .scroll-image {
+      display: none;
     }
 
-    .card--content {
-        min-width: auto;
-        margin: 0px $standard-margin $standard-margin $standard-margin;
-        height:40px;
-        text-align: center;
-        line-height: 40px;
-        padding: 0 ($standard-margin * 2);        
-        &:hover{
-            cursor: pointer;
-        }
+    @media (min-width: 768px) {
+      overflow: scroll;
+      justify-content: left;
+      .scroll-image {
+        display: block;
+        height: 200px;
+        width: 200px;
+      }
     }
-    
-    .card--content-selected{
-        margin: 0px;
-        color: black;
-        background-color: white;
-    }
+  }
 
-    .card {
-        @media (min-width: 768px) {
+  .card--content {
+    min-width: auto;
+    margin: 0px $standard-margin $standard-margin $standard-margin;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    padding: 0 ($standard-margin * 2);
+  }
 
-            border: 2px solid white;
-            border-radius: 5px;
-            margin: $standard-margin;
-            overflow: hidden;
-            height: 240px;
-            min-width: 200px;
-        }
+  .card--content-selected {
+    margin: 0px;
+    color: black;
+    background-color: white;
+  }
+
+  .card {
+    @media (min-width: 768px) {
+
+      border: 2px solid white;
+      border-radius: 5px;
+      margin: $standard-margin;
+      overflow: hidden;
+      height: 240px;
+      min-width: 200px;
+      &:hover{
+        cursor: pointer;
+
+      }
     }
-    .arrowIcon-left{
-        position: absolute;
-        color:$color-foreground;
-        font-size: 100px;
-        top:-30px;
-        left:0px;
-        opacity: 50%;
+  }
+    .arrow-icon {
+
+      width: 5vw;
+      height: 7vw;
+      margin:auto;
+      &:hover{
+        cursor:pointer;
+      }
     }
-    .arrowIcon-right{
-        position: absolute;
-        color:$color-foreground;
-        font-size: 100px;
-        top:-30px;
-        right:0px;
-        opacity: 50%;
+    .arrow-icon-right {
+      float:right;
+      background-color: white;
+      opacity: 60%;
+      width: 8vw;
+      height: 10vw;
+      margin: 1vw;
     }
 }
