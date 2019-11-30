@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
-import {MissionMap} from './MissionMap'
-import {MissionScrollBar} from './MissionScrollBar'
+import React, {useState} from 'react';
+import {MissionMap} from './MissionMap';
+import {MissionScrollBar} from './MissionScrollBar';
 import {MissionDescription} from './MissionDescription';
+import "./MissionPage.scss";
 
 export interface Mission {
     name: string,
@@ -179,26 +180,7 @@ function getMission(name: string): Mission | undefined {
     return landingList.find(mission => mission.name === name);
 }
 
-function getClassName(selectedId: string, popUpStatus: boolean) {
 
-    if (!popUpStatus) {
-        return "invisible";
-    }
-
-    const mission = getMission(selectedId);
-
-    if (mission) {      
-        
-        if (Number(mission.x) < 551){    
-            return "right";
-        } 
-        else {
-            return "left";
-        }
-    }
-
-    return "MissionDescription";
-}
 
 export function MissionPage() {
     const [selectedId, setSelectedId] = useState("Phoenix");
@@ -210,11 +192,12 @@ export function MissionPage() {
     }
 
     return (
-        <div>
-            <h1>Exciting Missions!</h1>
+        <div className="MissionPage">
             <MissionMap setSelectedId={changeSelectedId} selectedId={selectedId}/>
             <MissionScrollBar selectMissionCard={changeSelectedId} selectedCard={selectedId}/>        
-            <div className={getClassName(selectedId, showPopUp)} onClick={() => setShowPopUp(false)}> <MissionDescription mission={getMission(selectedId)}/></div>
+            {/*<div className={getClassName(selectedId, showPopUp)} onClick={() => setShowPopUp(false)}> */}
+                <MissionDescription mission={getMission(selectedId)} showPopUp={showPopUp} setShowPopUp={setShowPopUp}/>
+        {/*</div>*/}
         </div>
     )
 }
