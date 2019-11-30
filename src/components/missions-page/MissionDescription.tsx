@@ -47,7 +47,7 @@ export function MissionDescription(props: MissionDescriptionProps) {
                     <p className="launch">Launched: {props.mission.launched}</p>
                     <p className="launch">Landed: {props.mission.landed}</p>
                     <p>{truncateString(props.mission.description, 250)}</p>
-                    <a className="moreInfo" href={props.mission.moreInfoUrl}>More Info</a>
+                    <a className="moreInfo" target="_blank" href={props.mission.moreInfoUrl}>More Info</a>
                 </div>
             </div>
         </div>

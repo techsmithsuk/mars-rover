@@ -181,12 +181,11 @@ function getMission(name: string): Mission | undefined {
 }
 
 
-
 export function MissionPage() {
     const [selectedId, setSelectedId] = useState("Phoenix");
     const [showPopUp, setShowPopUp] = useState(true);
- 
-    function changeSelectedId(id: string){
+
+    function changeSelectedId(id: string) {
         setSelectedId(id);
         setShowPopUp(true);
     }
@@ -194,10 +193,8 @@ export function MissionPage() {
     return (
         <div className="MissionPage">
             <MissionMap setSelectedId={changeSelectedId} selectedId={selectedId}/>
-            <MissionScrollBar selectMissionCard={changeSelectedId} selectedCard={selectedId}/>        
-            {/*<div className={getClassName(selectedId, showPopUp)} onClick={() => setShowPopUp(false)}> */}
-                <MissionDescription mission={getMission(selectedId)} showPopUp={showPopUp} setShowPopUp={setShowPopUp}/>
-        {/*</div>*/}
+            <MissionScrollBar selectMissionCard={changeSelectedId} selectedCard={selectedId}/>
+            <MissionDescription mission={getMission(selectedId)} showPopUp={showPopUp} setShowPopUp={setShowPopUp}/>
         </div>
     )
 }
