@@ -27,8 +27,7 @@
         height:40px;
         text-align: center;
         line-height: 40px;
-        padding: 0 ($standard-margin * 2);
-        border-radius: $standard-margin;
+        padding: 0 ($standard-margin * 2);        
         &:hover{
             cursor: pointer;
         }
@@ -43,7 +42,7 @@
     .card {
         @media (min-width: 768px) {
             border: 2px solid white;
-            border-radius: $standard-margin;
+            border-radius: 2px;
             margin: $standard-margin;
             overflow: hidden;
             height: 240px;
