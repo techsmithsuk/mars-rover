@@ -6,12 +6,12 @@
         background-image: url("/images/mars-map.jpg");
         background-repeat:no-repeat;
         background-size:100%;
-        border: 2px solid white;
+        border: 2px solid $color-foreground;
         border-radius: 2px;
     }
 
     .circle {
-        fill:$button-primary;
+        stroke:white;
         &:hover{
             cursor: pointer;
         }
@@ -19,6 +19,7 @@
 
     .circle-clicked{
         transition: all 0.5s;
-        fill:$color-primary;
+        stroke: $color-foreground;
+        stroke-width: 4;
     }
 }

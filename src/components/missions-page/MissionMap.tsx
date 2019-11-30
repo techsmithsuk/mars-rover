@@ -26,7 +26,23 @@ export function MissionMap(props: MarsMapProps) {
     return (
         <div className="MissionMap">
             <svg className="map" viewBox="0 0 1135 567">
-                {landingList.map(landingSight => <circle onClick={() => props.setSelectedId(landingSight.name)} cx={landingSight.x} cy={landingSight.y} r = {getRadius(landingSight.name)} className={getClassName(landingSight.name)}/>)}
+                <defs>
+                    <pattern id="rover-pattern" height="100%" width="100%"
+                             patternContentUnits="objectBoundingBox">
+                        <image height="1" width="1" preserveAspectRatio="none" href="/images/opportunity_rover.jpg" />
+                    </pattern>
+                </defs>
+
+
+                {landingList.map(landingSight =>
+                    <circle
+                        onClick={() => props.setSelectedId(landingSight.name)}
+                        cx={landingSight.x}
+                        cy={landingSight.y}
+                        r = {getRadius(landingSight.name)}
+                        fill="url(#rover-pattern)"
+                        className={getClassName(landingSight.name)}
+                    />)}
             </svg>
         </div>
     )

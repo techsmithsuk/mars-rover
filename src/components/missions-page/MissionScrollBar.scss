@@ -41,13 +41,13 @@
 
     .card {
         @media (min-width: 768px) {
+
             border: 2px solid white;
-            border-radius: 2px;
+            border-radius: 5px;
             margin: $standard-margin;
             overflow: hidden;
             height: 240px;
             min-width: 200px;
-            overflow-y: hidden;
         }
     }
     .arrowIcon-left{
