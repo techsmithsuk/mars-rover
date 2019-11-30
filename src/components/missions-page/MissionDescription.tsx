@@ -18,7 +18,7 @@ export function MissionDescription(props: MissionDescriptionProps) {
     return (
         <div className="MissionDescription">
             <p className="name">{props.mission.name}</p>
-            <img className="mission-image" src={props.mission.imageSrc} alt="mission image"/>
+            <img className="mission-image" src={props.mission.imageSrc} alt="mission"/>
             <div className="info">
                 <p className="launch">Launched: {props.mission.launched}</p>
                 <p className="launch">Landed: {props.mission.landed}</p>
