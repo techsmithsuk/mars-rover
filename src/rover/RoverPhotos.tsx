@@ -36,8 +36,7 @@ export function RoverPhotos(props: RoverPhotosProps) {
     return (
         <div className="RoverPhotos">
             {photos.map(photo =>
-
-                <img className="rover-image" src={photo.img_src} />)}
+                <img className="rover-image" alt="camera"src={photo.img_src} />)}
         </div>
     );
 }
