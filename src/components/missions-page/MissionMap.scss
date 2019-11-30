@@ -17,9 +17,9 @@
         }
     }
 
-    .circle-clicked{
+    .circle-clicked{        
         transition: all 0.5s;
-        stroke: $color-foreground;
+        stroke: $color-primary;
         stroke-width: 4;
     }
 }
