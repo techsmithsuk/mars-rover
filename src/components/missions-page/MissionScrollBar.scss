@@ -7,7 +7,7 @@
   .scrollbar {
     position: relative;
     display: flex;
-    overflow: scroll;
+    overflow: hidden;
     padding: ($standard-margin * 2) 0;
 
     .scroll-image {
