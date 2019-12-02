@@ -5,21 +5,20 @@
         width:100%;
         background-image: url("/images/mars-map.jpg");
         background-repeat:no-repeat;
-        background-size:100%;
-        border: 2px solid $color-foreground;
+        background-size:100%;        
         border-radius: 2px;
     }
 
     .circle {
-        stroke:white;
+        stroke:$color-foreground;
         &:hover{
             cursor: pointer;
         }
     }
 
-    .circle-clicked{
+    .circle-clicked{        
         transition: all 0.5s;
-        stroke: $color-foreground;
-        stroke-width: 4;
+        stroke: $color-primary;
+        stroke-width: 2;        
     }
 }

@@ -15,7 +15,7 @@
     }
 
     @media (min-width: 768px) {
-      overflow: scroll;
+      overflow: hidden;
       justify-content: left;
       .scroll-image {
         display: block;
@@ -36,14 +36,15 @@
 
   .card--content-selected {
     margin: 0px;
-    color: black;
-    background-color: white;
+    color: $color-foreground;
+    font-weight: bold;
+    background-color: $color-primary;    
   }
 
   .card {
     @media (min-width: 768px) {
 
-      border: 2px solid white;
+      border: 2px solid $color-foreground;
       border-radius: 5px;
       margin: $standard-margin;
       overflow: hidden;
@@ -51,12 +52,10 @@
       min-width: 200px;
       &:hover{
         cursor: pointer;
-
       }
     }
   }
     .arrow-icon {
-
       width: 5vw;
       height: 7vw;
       margin:auto;
@@ -66,7 +65,7 @@
     }
     .arrow-icon-right {
       float:right;
-      background-color: white;
+      background-color: $color-foreground;      
       opacity: 60%;
       width: 8vw;
       height: 10vw;
