@@ -16,6 +16,7 @@ export type SingleDayData = {
 export async function fetchWeatherData(): Promise<SingleDayData[]> {
     const response = await fetch('https://api.nasa.gov/insight_weather/?api_key=dxcDht667Acmm4X2g4KpXub7NK5hU2S8GqL8Y067&feedtype=json&ver=1.0');
     const json = await response.json();
+    console.log(json)
     return parseData(json);
 } 
 
@@ -31,6 +32,7 @@ function parseData(apiJson: any): SingleDayData[] {
     let identity :number = 0;
     solKeys.forEach(key => {
         const apiData = apiJson[key];
+
         const data: SingleDayData = {  
             id:identity,
             marsSolDate: key,
@@ -38,8 +40,10 @@ function parseData(apiJson: any): SingleDayData[] {
             averageTemp: apiData.AT.av,
             minTemp: apiData.AT.mn,
             maxTemp: apiData.AT.mx,
-            averageWindSpeed: apiData.HWS.av,
-            windDirection: apiData.WD.most_common.compass_point,
+            // averageWindSpeed: apiData.HWS.av,
+            // windDirection: apiData.WD.most_common.compass_point,
+            averageWindSpeed: 6,
+            windDirection: "NNW",
             averagePressure: apiData.PRE.av,
             weekdayName: moment(apiData.First_UTC).format('dddd').substring(0,3)
         }
